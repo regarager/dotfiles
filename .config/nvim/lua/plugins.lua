@@ -36,12 +36,9 @@ require('packer').startup(function(use)
     use 'powerline/powerline'
 
     -- themes/appearance
-    use {
-        'catppuccin/nvim',
-        as = 'catppucin'
-    }
     use 'rebelot/kanagawa.nvim'
-    use 'rafi/awesome-vim-colorschemes'
+    use 'sainnhe/everforest'
+    use "olimorris/onedarkpro.nvim"
 
     use 'xiyaowong/transparent.nvim' -- transparent background
 

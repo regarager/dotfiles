@@ -18,7 +18,7 @@ vim.api.nvim_set_keymap('n', '<C-Tab>', ':BufferNext<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-S-Tab>', ':BufferNext<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-Q>', ':BufferClose<cr>', {noremap = true})
 
-vim.cmd('colorscheme kanagawa')
+vim.cmd.colorscheme('kanagawa-wave')
 
 vim.g.coc_global_extensions = {
     'coc-clangd',
