@@ -9,6 +9,9 @@ vim.cmd('syntax on')
 vim.opt.ttyfast = true
 
 require("plugins")
+require("lualine").setup({
+    theme = "material"
+})
 
 vim.g.rustfmt_autosave = 1
 

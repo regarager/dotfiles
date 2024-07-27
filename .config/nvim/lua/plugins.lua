@@ -32,8 +32,11 @@ require('packer').startup(function(use)
     use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
     use 'romgrk/barbar.nvim' -- tabs
 
-    -- powerline
-    use 'powerline/powerline'
+    -- lualine
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
 
     -- themes/appearance
     use 'rebelot/kanagawa.nvim'
