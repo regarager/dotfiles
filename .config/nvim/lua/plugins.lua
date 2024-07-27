@@ -45,4 +45,5 @@ require('packer').startup(function(use)
     -- language plugins
     use 'fatih/vim-go' -- go
     use 'ziglang/zig.vim' -- zig
+    use 'rust-lang/rust.vim' -- rust
 end)

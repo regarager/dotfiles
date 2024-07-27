@@ -10,9 +10,12 @@ vim.opt.ttyfast = true
 
 require("plugins")
 
+vim.g.rustfmt_autosave = 1
+
 vim.cmd[[
      inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#confirm() : "\<TAB>" 
 ]]
+
 vim.api.nvim_set_keymap('n', '\\', ':Neotree toggle<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-Tab>', ':BufferNext<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-S-Tab>', ':BufferNext<cr>', {noremap = true})
