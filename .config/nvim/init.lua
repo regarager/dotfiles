@@ -38,6 +38,7 @@ vim.g.coc_global_extensions = {
     'coc-pyright',
     'coc-tsserver',
     'coc-zig',
+    'coc-zls',
 
     'coc-discord-rpc',
 }
