@@ -104,7 +104,7 @@
 			"critical": 15
 		},
 		"format": "{icon} {time}",
-        "format-time": "{H}h {M}m",
+        "format-time": "{H}:{M}",
 		"format-icons": [
 			"",
 			"",
