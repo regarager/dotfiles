@@ -103,7 +103,8 @@
 			"warning": 30,
 			"critical": 15
 		},
-		"format": "{icon} {capacity}%",
+		"format": "{icon} {time}",
+        "format-time": "{H}h {M}m",
 		"format-icons": [
 			"",
 			"",
