@@ -39,7 +39,10 @@ require("packer").startup(function()
             -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
         },
     } -- file explorer
-    use "nvim-telescope/telescope.nvim"
+    use {
+        "nvim-telescope/telescope.nvim",
+        "BurntSushi/ripgrep",
+    }
 
     use "nvim-tree/nvim-web-devicons" -- OPTIONAL: for file icons
     use "lewis6991/gitsigns.nvim"     -- OPTIONAL: for git status

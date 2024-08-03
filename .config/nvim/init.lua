@@ -21,6 +21,7 @@ require("lsp-zero")
 require("lspconfig").intelephense.setup({})
 require("config.lsp")
 require("config.cmp")
+require("config.telescope")
 
 vim.g.rustfmt_autosave = 1
 
