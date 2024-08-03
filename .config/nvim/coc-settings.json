@@ -1,7 +1,0 @@
-{
-    "zig.zls.path": "$HOME/.config/coc/extensions/coc-zls-data/zls_install/zls",
-    "zig.enabled": true,
-    "zig.startUpMessage": true,
-    "zig.path": "zls",
-    "zig.debugLog": false
-}
