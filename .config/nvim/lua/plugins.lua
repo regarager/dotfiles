@@ -18,7 +18,14 @@ require("packer").startup(function()
     use "mhartington/formatter.nvim" -- formatting
     use "VonHeikemen/lsp-zero.nvim"
 
-    use "windwp/nvim-autopairs"
+    use {
+        "windwp/nvim-autopairs",
+        event = "InsertEnter",
+        config = function()
+            require("nvim-autopairs").setup {}
+        end
+    }
+
     use "windwp/nvim-ts-autotag"
     use({
         "L3MON4D3/LuaSnip",
