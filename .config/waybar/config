@@ -1,125 +1,77 @@
-// -*- mode: json -*-
 {
 	"layer": "top",
-	"position": "top",
-
-	"modules-left": [
-		"custom/right-arrow-dark",
-		"custom/right-arrow-light",
-        "tray",
-		"custom/right-arrow-dark",
-	],
-	"modules-center": [
-		"custom/left-arrow-dark",
-		"clock#1",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-		"clock#2",
-		"custom/right-arrow-dark",
-		"custom/right-arrow-light",
-		"clock#3",
-		"custom/right-arrow-dark"
-	],
-	"modules-right": [
-		"custom/left-arrow-dark",
-		"pulseaudio",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-		"memory",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-		"cpu",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-		//"disk",
-		//"custom/left-arrow-light",
-		//"custom/left-arrow-dark",
-        "battery",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-	],
-
-	"custom/left-arrow-dark": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/left-arrow-light": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/right-arrow-dark": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/right-arrow-light": {
-		"format": "",
-		"tooltip": false
-	},
-
-	"sway/workspaces": {
-		"disable-scroll": true,
-		"format": "{name}"
-	},
-
-	"clock#1": {
-		"format": "{:%a}",
-		"tooltip": false
-	},
-	"clock#2": {
-		"format": "{:%H:%M}",
-		"tooltip": false
-	},
-	"clock#3": {
-		"format": "{:%m-%d}",
-		"tooltip": false
-	},
-
+	"modules-left": ["custom/launcher","cpu","memory","custom/media","tray"],
+	"modules-center": ["hyprland/workspaces"],
+	"modules-right": ["temperature", "pulseaudio", "battery", "clock"],
+	
 	"pulseaudio": {
-		"format": "{icon} {volume:2}%",
-		"format-bluetooth": "{icon}  {volume}%",
-		"format-muted": "MUTE",
-		"format-icons": {
-			"headphones": "",
-			"default": [
-				"",
-				""
-			]
-		},
+		"tooltip": false,
 		"scroll-step": 5,
-		"on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
-		"on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+		"format": "{icon} {volume}%",
+		"format-muted": "{icon} {volume}%",
+		"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"format-icons": {
+			"default": ["", "", ""]
+		}
 	},
-	"memory": {
+	"network": {
+		"tooltip": false,
+		"format-wifi": "  {essid}",
+		"format-ethernet": ""
+	},
+    "temperature": {
+		"tooltip": false,
+		"format": " {temperatureC}°C",
+        "foramt-critical": " {temperatureC}°C",
+        "critical-threshold": 80,
 		"interval": 5,
-		"format": "Mem {}%"
 	},
-	"cpu": {
-		"interval": 5,
-		"format": "CPU {usage:2}%"
-	},
-	"battery": {
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 20,
+            "critical": 10
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
         "full-at": 38,
-		"states": {
-			"good": 95,
-			"warning": 30,
-			"critical": 15
-		},
-		"format": "{icon} {capacity}%",
-        "format-time": "{H}h {M}m",
-		"format-icons": [
-			"󱊡",
-			"󱊢",
-			"󱊣",
-		],
+        "format-icons": ["", "", "", "", ""]
+    },
+	"tray":{
+		"icon-size":18,
+		"spacing": 10
 	},
-	"disk": {
-		"interval": 5,
-		"format": "Disk {percentage_used:2}%",
-		"path": "/"
-	},
-	"tray": {
-		"icon-size": 20,
-        "spacing": 12,
-	},
-    "height": 24
+    "clock": {
+        "format": " {:%I:%M %p 󰃶 %d/%m/%Y}"
+    },
+    "cpu": {
+        "interval": 15,
+        "format": " {}%",
+        "max-length": 10
+    },
+    "memory": {
+        "interval": 30,
+        "format": " {}%",
+        "max-length": 10,
+    },
+    "custom/media": {
+        "interval": 30,
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 20,
+        "format-icons": {
+            "spotify": " ",
+            "default": " "
+        },
+        "escape": true,
+        "exec": "$HOME/.config/system_scripts/mediaplayer.py 2> /dev/null",
+        "on-click": "playerctl play-pause"
+    },
+    "custom/launcher":{
+        "format": " ",
+        "on-click": "wofi --show drun",
+        "on-click-right": "killall wofi"
+    },
 }
