@@ -1,6 +1,6 @@
 {
 	"layer": "top",
-	"modules-left": ["custom/launcher","cpu","memory","custom/media","tray"],
+	"modules-left": ["custom/launcher","cpu","memory","custom/media","network"],
 	"modules-center": ["hyprland/workspaces"],
 	"modules-right": ["temperature", "pulseaudio", "battery", "clock"],
 	
@@ -15,8 +15,7 @@
 		}
 	},
 	"network": {
-		"tooltip": false,
-		"format-wifi": "  {essid}",
+		"format-wifi": " {essid}",
 		"format-ethernet": ""
 	},
     "temperature": {
