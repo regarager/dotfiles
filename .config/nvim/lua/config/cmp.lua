@@ -11,7 +11,6 @@ cmp.setup({
     },
     mapping = cmp.mapping.preset.insert({
         ["<Tab>"] = cmp.mapping.confirm { select = true },
-        ["<S-Tab>"] = cmp_action.select_prev_or_fallback(),
     }),
     snippet = {
         expand = function(args)

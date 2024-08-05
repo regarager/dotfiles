@@ -10,6 +10,6 @@ $ git clone <repo url>
 $ cd dotfiles
 ```
 
-Then, run the install script `install.sh` (may require sudo).
+Install `yay` (an AUR helper) with `sudo pacman -S yay`.
 
-Alacritty themes (.config/alacritty/themes) come from [here](https://github.com/alacritty/alacritty-theme). Cloning may be required.
+Then, run the install script `install.sh` **without sudo**.
