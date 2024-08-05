@@ -13,7 +13,6 @@ require("lualine").setup({
     theme = "material"
 })
 require("mason").setup()
-
 require("mason-lspconfig").setup {
     ensure_installed = require("config.servers"),
 }
@@ -22,6 +21,7 @@ require("lspconfig").intelephense.setup({})
 require("config.lsp")
 require("config.cmp")
 require("config.telescope")
+require("config.autopairs")
 
 vim.g.rustfmt_autosave = 1
 
