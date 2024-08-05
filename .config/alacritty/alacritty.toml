@@ -19,5 +19,5 @@ program = "/usr/bin/zsh"
 
 [keyboard]
 bindings = [
-   { key = "Return", mods = "Control|Shift", action = "SpawnNewInstance" }
+   { key = "N", mods = "Control", action = "SpawnNewInstance" }
 ]
