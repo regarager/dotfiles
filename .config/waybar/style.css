@@ -51,9 +51,12 @@ window#waybar.hidden {
 
 #workspaces button.active {
     color: #ABE9B3;
+    /*
     border-top: 2px solid #ABE9B3;
     border-bottom: 2px solid #ABE9B3;
-    border-radius: 4px;
+    */
+    border: 2px solid #ABE9B3;
+    border-radius: 10px;
     /* border goes outside of the container on first and last buttons */
     /* margin: 2px;*/
 }
