@@ -16,3 +16,8 @@ size = 10
 
 [shell]
 program = "/usr/bin/zsh"
+
+[keyboard]
+bindings = [
+   { key = "Return", mods = "Control|Shift", action = "SpawnNewInstance" }
+]
