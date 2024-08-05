@@ -4,8 +4,10 @@
 	"position": "top",
 
 	"modules-left": [
-		"sway/workspaces",
-		"custom/right-arrow-dark"
+		"custom/right-arrow-dark",
+		"custom/right-arrow-light",
+        "tray",
+		"custom/right-arrow-dark",
 	],
 	"modules-center": [
 		"custom/left-arrow-dark",
@@ -35,7 +37,6 @@
         "battery",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
-		"tray"
 	],
 
 	"custom/left-arrow-dark": {
@@ -117,7 +118,7 @@
 		"path": "/"
 	},
 	"tray": {
-		"icon-size": 24,
+		"icon-size": 20,
         "spacing": 12,
 	},
     "height": 24
