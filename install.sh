@@ -1,6 +1,6 @@
 yay -S stow alacritty neovim
 yay -S exa bat catnap
-yay -S hyprland hyprpaper brightnessctl hyprshot xdg-desktop-portal-gtk xdg-desktop-portal-hyprland waybar wofi network-manager-applet
+yay -S hyprland hyprpaper brightnessctl hyprshot xdg-desktop-portal-gtk xdg-desktop-portal-hyprland waybar wofi
 yay -S ttf-jetbrains-mono
 yay -S vesktop
 
