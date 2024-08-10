@@ -36,7 +36,7 @@
         "format-plugged": " {capacity}%",
         "format-alt": "{time} {icon}",
         "full-at": 38,
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["󰂎", "󱊡", "󱊢", "󱊣" ]
     },
 	"tray":{
 		"icon-size":18,
