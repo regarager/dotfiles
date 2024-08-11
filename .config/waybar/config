@@ -23,7 +23,7 @@
 		"format": " {temperatureC}°C",
         "foramt-critical": " {temperatureC}°C",
         "critical-threshold": 80,
-		"interval": 5,
+		"interval": 15,
 	},
     "battery": {
         "states": {
