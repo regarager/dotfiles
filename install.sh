@@ -1,8 +1,8 @@
-yay -S stow alacritty neovim
-yay -S exa bat catnap
-yay -S hyprland hyprpaper brightnessctl hyprshot xdg-desktop-portal-gtk xdg-desktop-portal-hyprland waybar wofi
-yay -S ttf-jetbrains-mono
-yay -S vesktop
+yay -S stow alacritty neovim \
+    exa bat catnap \
+    hyprland hyprpaper hyprshot hyprlock dunst brightnessctl xdg-desktop-portal-gtk xdg-desktop-portal-hyprland waybar wofi \
+    ttf-jetbrains-mono \
+    vesktop
 
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim

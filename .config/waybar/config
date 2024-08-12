@@ -1,6 +1,6 @@
 {
 	"layer": "top",
-	"modules-left": ["custom/launcher","cpu","memory","custom/media","network"],
+	"modules-left": ["custom/launcher","cpu","memory","network"],
 	"modules-center": ["hyprland/workspaces"],
 	"modules-right": ["temperature", "pulseaudio", "battery", "clock"],
 	
@@ -19,7 +19,6 @@
 		"format-ethernet": ""
 	},
     "temperature": {
-		"tooltip": false,
 		"format": " {temperatureC}°C",
         "foramt-critical": " {temperatureC}°C",
         "critical-threshold": 80,
@@ -54,19 +53,6 @@
         "interval": 30,
         "format": " {}%",
         "max-length": 10,
-    },
-    "custom/media": {
-        "interval": 30,
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 20,
-        "format-icons": {
-            "spotify": " ",
-            "default": " "
-        },
-        "escape": true,
-        "exec": "$HOME/.config/system_scripts/mediaplayer.py 2> /dev/null",
-        "on-click": "playerctl play-pause"
     },
     "custom/launcher":{
         "format": "",
