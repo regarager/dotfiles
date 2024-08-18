@@ -5,24 +5,24 @@
 	"modules-right": ["temperature", "pulseaudio", "battery", "clock"],
 	
 	"pulseaudio": {
-		"tooltip": false,
 		"scroll-step": 5,
 		"format": "{icon} {volume}%",
-		"format-muted": "{icon} {volume}%",
 		"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
 		"format-icons": {
 			"default": ["", "", ""]
 		}
 	},
 	"network": {
-		"format-wifi": " {essid}",
-		"format-ethernet": ""
+		"format-wifi": "  {essid}",
+		"format-ethernet": "Ethernet",
+        "tooltip": false
 	},
     "temperature": {
 		"format": " {temperatureC}°C",
         "foramt-critical": " {temperatureC}°C",
         "critical-threshold": 80,
-		"interval": 15,
+		"interval": 5,
+        "tooltip": false
 	},
     "battery": {
         "states": {
@@ -34,7 +34,6 @@
         "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "{time} {icon}",
-        "full-at": 38,
         "format-icons": ["󰂎", "󱊡", "󱊢", "󱊣" ]
     },
 	"tray":{
@@ -42,7 +41,8 @@
 		"spacing": 10
 	},
     "clock": {
-        "format": " {:%I:%M %p 󰃶 %m/%d/%Y}"
+        "format": " {:%I:%M %p 󰃶 %m/%d/%Y}",
+        "tooltip": false
     },
     "cpu": {
         "interval": 15,
@@ -55,7 +55,7 @@
         "max-length": 10,
     },
     "custom/launcher":{
-        "format": "",
+        "format": "󰣇",
         "tooltip": false,
         "on-click": "wofi --show drun",
         "on-click-right": "killall wofi"

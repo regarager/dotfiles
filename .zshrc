@@ -44,3 +44,4 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/zig:$PATH"
 
 alias ls="exa --long --icons --no-user --no-permissions"
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
