@@ -18,6 +18,7 @@ require("mason-lspconfig").setup {
 }
 require("lsp-zero")
 require("lspconfig").intelephense.setup({})
+
 require("config.lsp")
 require("config.cmp")
 require("config.telescope")

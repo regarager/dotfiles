@@ -13,7 +13,7 @@
 		}
 	},
 	"network": {
-		"format-wifi": "  {essid}",
+		"format-wifi": " {essid}",
 		"format-ethernet": "Ethernet",
         "tooltip": false
 	},
@@ -34,7 +34,9 @@
         "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "{time} {icon}",
-        "format-icons": ["󰂎", "󱊡", "󱊢", "󱊣" ]
+        "format-icons": ["󰂎", "󱊡", "󱊢", "󱊣" ],
+        "full-at": 37,
+        "interval": 5,
     },
 	"tray":{
 		"icon-size":18,
@@ -45,12 +47,12 @@
         "tooltip": false
     },
     "cpu": {
-        "interval": 15,
+        "interval": 5,
         "format": " {}%",
         "max-length": 10
     },
     "memory": {
-        "interval": 30,
+        "interval": 5,
         "format": " {}%",
         "max-length": 10,
     },

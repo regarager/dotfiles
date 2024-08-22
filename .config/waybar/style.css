@@ -1,7 +1,7 @@
 * {
     border: none;
     border-radius: 10;
-    font-family: "JetBrains Mono";
+    font-family: "0xProto";
     font-size: 14px;
     min-height: 10px;
 }
@@ -199,7 +199,7 @@ window#waybar.hidden {
     margin-top: 6px;
     margin-left: 6px;
     padding-left: 10px;
-    padding-right: 16px;
+    padding-right: 10px;
     border-radius: 10px;
     transition: none;
     color: #89DCEB;
