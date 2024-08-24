@@ -24,8 +24,9 @@ return require("packer").startup(function()
         "williamboman/mason-lspconfig.nvim",
     }                      -- autocomplete
     use "hrsh7th/nvim-cmp" -- not sure if needed, also autocomplete
-    use "hrsh7th/cmp-nvim-lsp"
     use "neovim/nvim-lspconfig"
+    use "mfussenegger/nvim-dap"
+    use "hrsh7th/cmp-nvim-lsp"
     use "onsails/lspkind.nvim"       -- autocomplete icons
     use "mhartington/formatter.nvim" -- formatting
     use "VonHeikemen/lsp-zero.nvim"
@@ -77,4 +78,5 @@ return require("packer").startup(function()
     use "fatih/vim-go"       -- go
     use "ziglang/zig.vim"    -- zig
     use "rust-lang/rust.vim" -- rust
+    use "mfussenegger/nvim-jdtls" -- java
 end)

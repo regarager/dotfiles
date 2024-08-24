@@ -7,6 +7,7 @@ local list = {
     "css_variables",
     "gopls",
     "html",
+    "jdtls",
     "biome",
     "texlab",
     "lua_ls",
