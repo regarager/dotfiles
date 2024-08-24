@@ -34,6 +34,7 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+eval "$(zoxide init zsh)"
 
 export GPG_TTY=$(tty) # for gpg stuff
 
@@ -44,4 +45,5 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/zig:$PATH"
 
 alias ls="exa --long --icons --no-user --no-permissions"
+alias cd="z"
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme

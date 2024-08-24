@@ -1,8 +1,8 @@
 {
 	"layer": "top",
-	"modules-left": ["custom/launcher","cpu","memory","network"],
+	"modules-left": ["cpu","memory","network"],
 	"modules-center": ["hyprland/workspaces"],
-	"modules-right": ["temperature", "pulseaudio", "battery", "clock"],
+	"modules-right": ["pulseaudio", "battery", "clock"],
 	
 	"pulseaudio": {
 		"scroll-step": 5,
