@@ -8,6 +8,8 @@ vim.opt.number = true
 vim.cmd("syntax on")
 vim.opt.ttyfast = true
 
+require("config.lazy")
+
 require("plugins")
 require("lualine").setup({
     theme = "material"
@@ -16,8 +18,12 @@ require("mason").setup()
 require("mason-lspconfig").setup {
     ensure_installed = require("config.servers"),
 }
+
+require("java").setup()
+
 require("lsp-zero")
 require("lspconfig").intelephense.setup({})
+require('lspconfig').jdtls.setup({})
 
 require("config.lsp")
 require("config.cmp")
