@@ -40,10 +40,14 @@ export GPG_TTY=$(tty) # for gpg stuff
 
 export HYPRSHOT_DIR="$HOME/Pictures/Screenshots"
 
+alias ls="exa --long --icons --no-user --no-permissions"
+alias cd="z"
+
 export PATH=/bin:/usr/bin:/usr/local/bin:/sbin:${PATH}
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/zig:$PATH"
+export PATH="$HOME/.jenv/bin:$PATH"
 
-alias ls="exa --long --icons --no-user --no-permissions"
-alias cd="z"
+eval "$(jenv init -)"
+
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
