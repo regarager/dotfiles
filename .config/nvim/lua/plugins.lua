@@ -37,6 +37,8 @@ return {
     -- Themes/Appearance
     { "rebelot/kanagawa.nvim" },
     { "olimorris/onedarkpro.nvim" },
+    { "EdenEast/nightfox.nvim" },
+    { "sainnhe/everforest" },
     { "xiyaowong/transparent.nvim" }, -- Transparent background
     -- Language Plugins
     { "fatih/vim-go" },               -- Go

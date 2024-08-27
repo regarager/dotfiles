@@ -34,7 +34,8 @@ vim.g.rustfmt_autosave = 1
 
 vim.api.nvim_set_keymap("n", "\\", ":Neotree toggle<cr>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<C-Tab>", ":BufferNext<cr>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<C-S-Tab>", ":BufferNext<cr>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<C-S-Tab>", ":BufferPrevious<cr>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<C-Q>", ":BufferClose<cr>", { noremap = true })
 
 vim.cmd.colorscheme("onedark_vivid")
+vim.cmd("TransparentEnable")
