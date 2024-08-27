@@ -41,12 +41,14 @@ export GPG_TTY=$(tty) # for gpg stuff
 export HYPRSHOT_DIR="$HOME/Pictures/Screenshots"
 
 alias ls="exa --long --icons --no-user --no-permissions"
+alias fetch="pokeget --hide-name mudkip | fastfetch --file-raw -"
 alias cd="z"
 
 export PATH=/bin:/usr/bin:/usr/local/bin:/sbin:${PATH}
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/zig:$PATH"
 export PATH="$HOME/.jenv/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 eval "$(jenv init -)"
 

@@ -1,5 +1,5 @@
 yay -S stow alacritty neovim \
-    exa bat catnap \
+    exa bat fastfetch pokeget \
     hyprland hyprpaper hyprshot hyprlock dunst brightnessctl xdg-desktop-portal-gtk xdg-desktop-portal-hyprland waybar wofi \
     ttf-jetbrains-mono ttf-jetbrains-mono-nerd \
     vesktop \
