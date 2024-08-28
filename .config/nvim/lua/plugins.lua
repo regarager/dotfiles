@@ -12,16 +12,27 @@ return {
     { "VonHeikemen/lsp-zero.nvim" },
     { "jiangmiao/auto-pairs" },       -- Auto pairs
     { "windwp/nvim-ts-autotag" },     -- Autotag
+    { 'numToStr/Comment.nvim', },     -- commenting
     {
         "L3MON4D3/LuaSnip",           -- Snippet engine
         version = "v2.*",             -- Use the latest release version
         build = "make install_jsregexp"
     },
+
     -- Files
     {
         "nvim-telescope/telescope.nvim",
         tag = "0.1.8",
         dependencies = { "nvim-lua/plenary.nvim" }
+    },
+    {
+        "ibhagwan/fzf-lua",
+        -- optional for icon support
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        config = function()
+            -- calling `setup` is optional for customization
+            require("fzf-lua").setup({})
+        end
     },
     {
         "nvim-neo-tree/neo-tree.nvim",
@@ -33,18 +44,22 @@ return {
             "lewis6991/gitsigns.nvim"      -- Git status (optional)
         }
     },
-    { "romgrk/barbar.nvim" }, -- Tabs
+    { 'jghauser/mkdir.nvim' }, -- automatically mkdir on save
+    { "romgrk/barbar.nvim" },  -- Tabs
+
     -- Themes/Appearance
     { "rebelot/kanagawa.nvim" },
     { "olimorris/onedarkpro.nvim" },
     { "EdenEast/nightfox.nvim" },
     { "sainnhe/everforest" },
     { "xiyaowong/transparent.nvim" }, -- Transparent background
+
     -- Language Plugins
-    { "fatih/vim-go" },               -- Go
-    { "ziglang/zig.vim" },            -- Zig
-    { "rust-lang/rust.vim" },         -- Rust
-    { "nvim-java/nvim-java" },        -- Java
+    { "fatih/vim-go" },        -- Go
+    { "ziglang/zig.vim" },     -- Zig
+    { "rust-lang/rust.vim" },  -- Rust
+    { "nvim-java/nvim-java" }, -- Java
+
     -- Misc.
     {
         "folke/which-key.nvim",
@@ -59,7 +74,7 @@ return {
                 desc = "Buffer Local Keymaps (which-key)",
             },
         },
-    },                                                                                 -- which-key
+    },                                                                                    -- which-key
     { "nvim-lualine/lualine.nvim",    dependencies = { "nvim-tree/nvim-web-devicons" } }, -- Lualine
-    { dir = "~/Projects/lua/jclasses" }, --        dependencies = { "MunifTanjim/nui.nvim" } }
+    { dir = "~/Projects/lua/jclasses" },                                                  --        dependencies = { "MunifTanjim/nui.nvim" } }
 }
