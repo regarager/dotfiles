@@ -8,8 +8,14 @@
     },
     "modules": [
         {
+            "type": "title",
+            "key": "╭─",
+            "format": "{1}@{2}",
+            "keyColor": "blue"
+        },
+        {
             "type": "host",
-            "key": "╭─󰌢",
+            "key": "├─󰌢",
             "keyColor": "blue"
         },
         {
@@ -34,25 +40,25 @@
         {
             "type": "shell",
             "key": "╭─",
-            "keyColor": "cyan"
+            "keyColor": "yellow"
         },
         {
             "type": "terminal",
             "key": "├─",
-            "keyColor": "cyan"
+            "keyColor": "yellow"
         },
         {
             "type": "wm",
             "key": "├─",
-            "keyColor": "cyan"
+            "keyColor": "yellow"
         },{
             "type": "memory",
             "key": "├─󰑭",
-            "keyColor": "cyan"
+            "keyColor": "yellow"
         },{
             "type": "uptime",
             "key": "╰─󰅐",
-            "keyColor": "cyan"
+            "keyColor": "yellow"
         }
     ]
 }
