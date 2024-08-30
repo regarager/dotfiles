@@ -25,6 +25,14 @@ require("lsp-zero")
 require("lspconfig").intelephense.setup({})
 require('lspconfig').jdtls.setup({})
 require('Comment').setup()
+require('nvim-ts-autotag').setup({
+    opts = {
+        -- Defaults
+        enable_close = true,          -- Auto close tags
+        enable_rename = true,         -- Auto rename pairs of tags
+        enable_close_on_slash = false -- Auto close on trailing </
+    },
+})
 
 require("config.lsp")
 require("config.cmp")
