@@ -1,9 +1,12 @@
 yay -S stow alacritty neovim \
-    exa bat fastfetch pokeget \
+    jenv jdk8-openjdk jdk11-openjdk jdk17-openjdk jdk-openjdk \
+    rust \
+    exa bat fastfetch \
     hyprland hyprpaper hyprshot hyprlock dunst brightnessctl xdg-desktop-portal-gtk xdg-desktop-portal-hyprland waybar wofi \
     ttf-jetbrains-mono ttf-jetbrains-mono-nerd \
-    vesktop \
-    jenv jdk8-openjdk jdk11-openjdk jdk17-openjdk jdk-openjdk
+    vesktop
+
+cargo install pokeget
 
 git clone https://github.com/alacritty/alacritty-theme .config/alacritty/themes
 
