@@ -62,6 +62,7 @@ return {
     { "olimorris/onedarkpro.nvim" },
     { "EdenEast/nightfox.nvim" },
     { "sainnhe/everforest" },
+    { "folke/tokyonight.nvim" },
     { "xiyaowong/transparent.nvim" }, -- Transparent background
 
     -- Language Plugins

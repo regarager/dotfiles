@@ -46,5 +46,5 @@ vim.api.nvim_set_keymap("n", "<C-Tab>", ":BufferNext<cr>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<C-S-Tab>", ":BufferPrevious<cr>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<C-Q>", ":BufferClose<cr>", { noremap = true })
 
-vim.cmd.colorscheme("onedark")
+vim.cmd.colorscheme("tokyonight")
 vim.cmd("TransparentEnable")
