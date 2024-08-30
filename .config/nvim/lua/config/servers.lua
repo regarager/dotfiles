@@ -8,7 +8,6 @@ local list = {
     "gopls",
     "html",
     "jdtls",
-    "biome",
     "texlab",
     "lua_ls",
     "pyright",
