@@ -1,21 +1,31 @@
 return {
-    -- Syntax, LSP, etc.
+    -- LSP + Treesitter
     { "nvim-treesitter/nvim-treesitter",  build = ":TSUpdate" }, -- Treesitter
     { "williamboman/mason.nvim" },
     { "williamboman/mason-lspconfig.nvim" },
     { "neovim/nvim-lspconfig" },
-    { "hrsh7th/nvim-cmp" },           -- Autocomplete
+
+    -- Autocomplete
+    { "hrsh7th/nvim-cmp" },          -- Autocomplete
     { "hrsh7th/cmp-nvim-lsp" },
-    { "onsails/lspkind.nvim" },       -- Autocomplete icons
-    { "mfussenegger/nvim-dap" },      -- Debug Adapter Protocol
-    { "mhartington/formatter.nvim" }, -- Formatting
-    { "VonHeikemen/lsp-zero.nvim" },
-    { "jiangmiao/auto-pairs" },       -- Auto pairs
-    { "windwp/nvim-ts-autotag" },     -- Autotag
-    { 'numToStr/Comment.nvim', },     -- commenting
+    { "onsails/lspkind.nvim" },      -- Autocomplete icons
+    { "VonHeikemen/lsp-zero.nvim" }, -- LSP config
+
+    -- Debug
+    { "mfussenegger/nvim-dap" }, -- Debug Adapter Protocol
+
+    -- Editing
+    { "mhartington/formatter.nvim" }, -- Autoformat
     {
-        "L3MON4D3/LuaSnip",           -- Snippet engine
-        version = "v2.*",             -- Use the latest release version
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        config = true
+    },                             -- Autopairs
+    { "windwp/nvim-ts-autotag", }, -- Autotag
+    { 'numToStr/Comment.nvim', },  -- Commenting
+    {
+        "L3MON4D3/LuaSnip",        -- Snippet engine
+        version = "v2.*",          -- Use the latest release version
         build = "make install_jsregexp"
     },
 
@@ -33,7 +43,7 @@ return {
             -- calling `setup` is optional for customization
             require("fzf-lua").setup({})
         end
-    },
+    }, -- Fuzzy find
     {
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v3.x",
@@ -43,9 +53,9 @@ return {
             "MunifTanjim/nui.nvim",
             "lewis6991/gitsigns.nvim"      -- Git status (optional)
         }
-    },
-    { 'jghauser/mkdir.nvim' }, -- automatically mkdir on save
-    { "romgrk/barbar.nvim" },  -- Tabs
+    },                                     -- File tree
+    { 'jghauser/mkdir.nvim' },             -- Automatically mkdir on save
+    { "romgrk/barbar.nvim" },              -- Tabs
 
     -- Themes/Appearance
     { "rebelot/kanagawa.nvim" },
@@ -56,8 +66,6 @@ return {
 
     -- Language Plugins
     { "fatih/vim-go" },        -- Go
-    { "ziglang/zig.vim" },     -- Zig
-    { "rust-lang/rust.vim" },  -- Rust
     { "nvim-java/nvim-java" }, -- Java
 
     -- Misc.
