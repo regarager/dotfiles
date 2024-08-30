@@ -83,7 +83,7 @@ return {
                 desc = "Buffer Local Keymaps (which-key)",
             },
         },
-    },                                                                                    -- which-key
-    { "nvim-lualine/lualine.nvim",    dependencies = { "nvim-tree/nvim-web-devicons" } }, -- Lualine
-    { dir = "~/Projects/lua/jclasses" },                                                  --        dependencies = { "MunifTanjim/nui.nvim" } }
+    },                                                                                 -- which-key
+    { "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } }, -- Lualine
+    { "regarager/jclasses",        dependencies = { "MunifTanjim/nui.nvim" } }         -- Make classes for Java
 }
