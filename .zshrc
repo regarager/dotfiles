@@ -43,6 +43,7 @@ export HYPRSHOT_DIR="$HOME/Pictures/Screenshots"
 alias ls="exa --long --icons --no-user --no-permissions"
 alias fetch="pokeget --hide-name mudkip | fastfetch --file-raw -"
 alias cd="z"
+alias cdi="zi"
 
 export PATH=/bin:/usr/bin:/usr/local/bin:/sbin:${PATH}
 export PATH="$HOME/.local/bin:$PATH"
