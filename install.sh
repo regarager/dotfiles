@@ -1,4 +1,4 @@
-yay -S stow alacritty neovim \
+yay -S zsh stow alacritty neovim \
     jenv jdk8-openjdk jdk11-openjdk jdk17-openjdk jdk-openjdk \
     rust \
     exa bat fastfetch \
