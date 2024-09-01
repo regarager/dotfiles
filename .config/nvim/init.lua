@@ -5,6 +5,7 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.autoindent = true
 vim.opt.number = true
+vim.opt.relativenumber = true
 vim.cmd("syntax on")
 vim.opt.ttyfast = true
 
@@ -46,5 +47,10 @@ vim.api.nvim_set_keymap("n", "<C-Tab>", ":BufferNext<cr>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<C-S-Tab>", ":BufferPrevious<cr>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<C-Q>", ":BufferClose<cr>", { noremap = true })
 
-vim.cmd.colorscheme("tokyonight")
+vim.cmd.colorscheme("tokyonight-storm")
 vim.cmd("TransparentEnable")
+
+
+vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#999999" })
+vim.api.nvim_set_hl(0, "LineNr", { fg = "#e6e6e6" })
+vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#999999" })
