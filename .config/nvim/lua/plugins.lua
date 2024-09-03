@@ -22,10 +22,22 @@ return {
         config = true
     },                             -- Autopairs
     { "windwp/nvim-ts-autotag", }, -- Autotag
-    { 'numToStr/Comment.nvim', },  -- Commenting
     {
-        "L3MON4D3/LuaSnip",        -- Snippet engine
-        version = "v2.*",          -- Use the latest release version
+        'numToStr/Comment.nvim',
+        config = function()
+            require("Comment").setup({
+                toggler = {
+                    line = "<C-/>",
+                },
+                opleader = {
+                    block = "<C-/>"
+                }
+            })
+        end
+    },                      -- Commenting
+    {
+        "L3MON4D3/LuaSnip", -- Snippet engine
+        version = "v2.*",   -- Use the latest release version
         build = "make install_jsregexp"
     },
 
