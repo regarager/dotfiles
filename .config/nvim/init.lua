@@ -40,16 +40,13 @@ require("config.cmp")
 require("config.telescope")
 require("config.autopairs")
 
-vim.g.rustfmt_autosave = 1
-
 vim.api.nvim_set_keymap("n", "\\", ":Neotree toggle<cr>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<C-Tab>", ":BufferNext<cr>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<C-S-Tab>", ":BufferPrevious<cr>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<C-Q>", ":BufferClose<cr>", { noremap = true })
 
-vim.cmd.colorscheme("tokyonight-storm")
+vim.cmd.colorscheme("tokyonight-moon")
 vim.cmd("TransparentEnable")
-
 
 vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#999999" })
 vim.api.nvim_set_hl(0, "LineNr", { fg = "#e6e6e6" })
