@@ -17,13 +17,13 @@ return {
     -- Editing
     { "mhartington/formatter.nvim" }, -- Autoformat
     {
-        'windwp/nvim-autopairs',
+        "windwp/nvim-autopairs",
         event = "InsertEnter",
         config = true
     },                             -- Autopairs
     { "windwp/nvim-ts-autotag", }, -- Autotag
     {
-        'numToStr/Comment.nvim',
+        "numToStr/Comment.nvim",
         config = function()
             require("Comment").setup({
                 toggler = {
@@ -66,7 +66,7 @@ return {
             "lewis6991/gitsigns.nvim"      -- Git status (optional)
         }
     },                                     -- File tree
-    { 'jghauser/mkdir.nvim' },             -- Automatically mkdir on save
+    { "jghauser/mkdir.nvim" },             -- Automatically mkdir on save
     { "romgrk/barbar.nvim" },              -- Tabs
 
     -- Themes/Appearance
@@ -75,6 +75,8 @@ return {
     { "EdenEast/nightfox.nvim" },
     { "sainnhe/everforest" },
     { "folke/tokyonight.nvim" },
+    { "AlexvZyl/nordic.nvim" },
+    { "ribru17/bamboo.nvim" },
     { "xiyaowong/transparent.nvim" }, -- Transparent background
 
     -- Language Plugins
