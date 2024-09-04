@@ -6,7 +6,7 @@
         "network"
     ],
     "modules-center": [
-        "sway/workspaces"
+        "hyprland/workspaces"
     ],
     "modules-right": [
         "pulseaudio",
