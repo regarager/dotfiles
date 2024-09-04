@@ -13,7 +13,9 @@ require("config.lazy")
 
 require("plugins")
 require("lualine").setup({
-    theme = "material"
+    options = {
+        theme = "horizon"
+    }
 })
 require("mason").setup()
 require("mason-lspconfig").setup {
