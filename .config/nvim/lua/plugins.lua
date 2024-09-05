@@ -70,13 +70,7 @@ return {
     { "romgrk/barbar.nvim" },              -- Tabs
 
     -- Themes/Appearance
-    { "rebelot/kanagawa.nvim" },
-    { "olimorris/onedarkpro.nvim" },
-    { "EdenEast/nightfox.nvim" },
-    { "sainnhe/everforest" },
     { "folke/tokyonight.nvim" },
-    { "AlexvZyl/nordic.nvim" },
-    { "ribru17/bamboo.nvim" },
     { "xiyaowong/transparent.nvim" }, -- Transparent background
 
     -- Language Plugins
@@ -99,5 +93,6 @@ return {
         },
     },                                                                                 -- which-key
     { "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } }, -- Lualine
-    { "regarager/jclasses",        dependencies = { "MunifTanjim/nui.nvim" } }         -- Make classes for Java
+    { "regarager/jclasses",        dependencies = { "MunifTanjim/nui.nvim" } },        -- Make classes for Java
+    { "andweeb/presence.nvim" }
 }
