@@ -41,7 +41,7 @@ export GPG_TTY=$(tty) # for gpg stuff
 export HYPRSHOT_DIR="$HOME/Pictures/Screenshots"
 
 alias ls="exa --long --icons --no-user --no-permissions"
-alias fetch="pokeget --hide-name mudkip | fastfetch --file-raw -"
+alias fetch="pokeget --hide-name celebi | fastfetch --file-raw -"
 alias cd="z"
 alias cdi="zi"
 
@@ -50,6 +50,7 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/zig:$PATH"
 export PATH="$HOME/.jenv/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/idafree-8.4:$PATH"
 
 eval "$(jenv init -)"
 
