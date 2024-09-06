@@ -11,7 +11,7 @@ padding.y = 0
 opacity = 0.75
 
 [font]
-normal.family = "0xProto"
+normal.family = "Space Mono"
 size = 10
 
 [shell]
@@ -19,5 +19,5 @@ program = "/usr/bin/zsh"
 
 [keyboard]
 bindings = [
-   { key = "N", mods = "Control", action = "SpawnNewInstance" }
+   { key = "Enter", mods = "Control", action = "SpawnNewInstance" }
 ]
