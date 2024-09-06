@@ -1,9 +1,9 @@
 yay -S zsh stow alacritty neovim \
     jenv jdk8-openjdk jdk11-openjdk jdk17-openjdk jdk-openjdk \
     rust \
-    exa bat fastfetch \
+    exa bat fastfetch fzf \
     hyprland hyprpaper hyprshot hyprlock dunst brightnessctl xdg-desktop-portal-gtk xdg-desktop-portal-hyprland waybar wofi \
-    ttf-jetbrains-mono ttf-jetbrains-mono-nerd \
+    ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-spacemono ttf-space-mono-nerd \
     vesktop
 
 cargo install pokeget
