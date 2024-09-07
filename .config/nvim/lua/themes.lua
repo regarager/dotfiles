@@ -7,4 +7,5 @@ return {
     { "sainnhe/everforest" },
     { "AlexvZyl/nordic.nvim" },
     { "ribru17/bamboo.nvim" },
+    { "catppuccin/nvim" },
 }
