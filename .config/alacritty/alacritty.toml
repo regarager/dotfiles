@@ -11,8 +11,8 @@ padding.y = 0
 opacity = 0.75
 
 [font]
-normal.family = "RobotoMono Nerd Font"
-size = 10
+normal.family = "ComicShanns Nerd Font"
+size = 11
 
 [shell]
 program = "/usr/bin/zsh"
