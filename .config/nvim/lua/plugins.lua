@@ -15,7 +15,9 @@ return {
     { "mfussenegger/nvim-dap" }, -- Debug Adapter Protocol
 
     -- Editing
-    { "mhartington/formatter.nvim" }, -- Autoformat
+    { "mhartington/formatter.nvim" },  -- Autoformat
+    { "MunifTanjim/prettier.nvim" },   -- Prettier
+    { "norcalli/nvim-colorizer.lua" }, -- Highlight colors
     {
         "windwp/nvim-autopairs",
         event = "InsertEnter",
