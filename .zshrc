@@ -44,6 +44,7 @@ alias ls="eza --long --icons --no-user --no-permissions"
 alias fetch="pokeget --hide-name celebi | fastfetch --file-raw -"
 alias cd="z"
 alias cdi="zi"
+alias cat="bat -p"
 
 export PATH=/bin:/usr/bin:/usr/local/bin:/sbin:${PATH}
 export PATH="$HOME/.local/bin:$PATH"
