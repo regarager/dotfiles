@@ -42,6 +42,7 @@ export HYPRSHOT_DIR="$HOME/Pictures/Screenshots"
 export BAT_THEME="OneHalfDark"
 
 alias ls="eza --long --icons --no-user --no-permissions"
+alias la="eza -a --long --icons --no-user --no-permissions"
 alias fetch="pokeget --hide-name celebi | fastfetch --file-raw -"
 alias cd="z"
 alias cdi="zi"
