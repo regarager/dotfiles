@@ -39,12 +39,13 @@ eval "$(zoxide init zsh)"
 export GPG_TTY=$(tty) # for gpg stuff
 
 export HYPRSHOT_DIR="$HOME/Pictures/Screenshots"
+export BAT_THEME="OneHalfDark"
 
 alias ls="eza --long --icons --no-user --no-permissions"
 alias fetch="pokeget --hide-name celebi | fastfetch --file-raw -"
 alias cd="z"
 alias cdi="zi"
-alias cat="bat -p"
+alias cat="bat -pp" # plain style (only code) and disables less paging
 
 export PATH=/bin:/usr/bin:/usr/local/bin:/sbin:${PATH}
 export PATH="$HOME/.local/bin:$PATH"
