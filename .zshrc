@@ -40,7 +40,7 @@ export GPG_TTY=$(tty) # for gpg stuff
 
 export HYPRSHOT_DIR="$HOME/Pictures/Screenshots"
 
-alias ls="exa --long --icons --no-user --no-permissions"
+alias ls="eza --long --icons --no-user --no-permissions"
 alias fetch="pokeget --hide-name celebi | fastfetch --file-raw -"
 alias cd="z"
 alias cdi="zi"

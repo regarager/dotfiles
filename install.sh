@@ -1,7 +1,7 @@
 yay -S zsh stow alacritty neovim \
     jenv jdk8-openjdk jdk11-openjdk jdk17-openjdk jdk-openjdk \
     rust \
-    exa bat fastfetch fzf \
+    eza bat fastfetch fzf \
     hyprland hyprpaper hyprshot hyprlock dunst brightnessctl xdg-desktop-portal-gtk xdg-desktop-portal-hyprland waybar wofi \
     ttf-jetbrains-mono-nerd ttf-space-mono-nerd ttf-comic-shanns-nerd \
     vesktop
