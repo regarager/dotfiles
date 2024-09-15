@@ -58,3 +58,5 @@ export PATH="$HOME/idafree-8.4:$PATH"
 eval "$(jenv init -)"
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+eval $(thefuck --alias)
