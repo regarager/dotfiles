@@ -8,6 +8,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.cmd("syntax on")
 vim.opt.ttyfast = true
+vim.opt.clipboard = "unnamedplus"
 
 require("config.lazy")
 
