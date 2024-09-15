@@ -41,7 +41,8 @@ export GPG_TTY=$(tty) # for gpg stuff
 export HYPRSHOT_DIR="$HOME/Pictures/Screenshots"
 export BAT_THEME="OneHalfDark"
 
-alias ls="eza --long --icons --no-user --no-permissions"
+alias ls="eza"
+alias ll="eza --long --icons"
 alias la="eza -a --long --icons --no-user --no-permissions"
 alias fetch="pokeget --hide-name mudkip | fastfetch --file-raw -"
 alias cd="z"
