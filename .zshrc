@@ -43,7 +43,7 @@ export BAT_THEME="OneHalfDark"
 
 alias ls="eza --long --icons --no-user --no-permissions"
 alias la="eza -a --long --icons --no-user --no-permissions"
-alias fetch="pokeget --hide-name chinchou | fastfetch --file-raw -"
+alias fetch="pokeget --hide-name mudkip | fastfetch --file-raw -"
 alias cd="z"
 alias cdi="zi"
 alias cat="bat -pp" # plain style (only code) and disables less paging
