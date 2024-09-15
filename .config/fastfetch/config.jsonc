@@ -17,28 +17,28 @@
             "type": "title",
             "key": "╭─",
             "format": "{1}@{2}",
-            "keyColor": "green"
+            "keyColor": "blue"
         },
         {
             "type": "host",
             "key": "├─󰌢",
-            "keyColor": "green"
+            "keyColor": "blue"
         },
         {
             "type": "os",
             "key": "├─󰣇", // Just get your distro's logo off nerdfonts.com
-            "keyColor": "green"
+            "keyColor": "blue"
         },
         {
             "type": "kernel",
             "key": "├─",
             "format": "{1} {2}",
-            "keyColor": "green"
+            "keyColor": "blue"
         },
         {
             "type": "packages",
             "key": "╰─󰏖",
-            "keyColor": "green"
+            "keyColor": "blue"
         },
         
             "break",
@@ -46,25 +46,25 @@
         {
             "type": "shell",
             "key": "╭─",
-            "keyColor": "cyan"
+            "keyColor": "yellow"
         },
         {
             "type": "terminal",
             "key": "├─",
-            "keyColor": "cyan"
+            "keyColor": "yellow"
         },
         {
             "type": "wm",
             "key": "├─",
-            "keyColor": "cyan"
+            "keyColor": "yellow"
         },{
             "type": "memory",
             "key": "├─󰑭",
-            "keyColor": "cyan"
+            "keyColor": "yellow"
         },{
             "type": "uptime",
             "key": "╰─󰅐",
-            "keyColor": "cyan"
+            "keyColor": "yellow"
         }
     ]
 }
