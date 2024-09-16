@@ -3,7 +3,7 @@
     "modules-left": [
         "cpu",
         "memory",
-        "network"
+        "tray"
     ],
     "modules-center": [
         "hyprland/workspaces"
@@ -65,7 +65,7 @@
     },
     "cpu": {
         "interval": 5,
-        "format": " {}%",
+        "format": " {usage}%",
         "max-length": 10
     },
     "memory": {
