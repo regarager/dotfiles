@@ -1,56 +1,61 @@
-/* from https://github.com/sachahjkl/wofi-arc-dark/tree/master */
-
-/* ::root{ */
-/*     --accent: #5291e2; */
-/*     --dark: #383C4A; */
-/*     --light: #7C818C; */
-/*     --ld: #404552; */
-/*     --dl: #4B5162 */
-/*     --white: white; */
-/* } */
-
-* {
-    font-family: JetBrainsMono Nerd Font;
-    font-size: 14px;
+/* https://github.com/calthejuggler/awesome-wofi/blob/main/themes/raycast/style.css */
+/* The name of the window itself */
+#window {
+    background-color: rgba(24, 24, 24, 0.6);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    /* The name of the box that contains everything */
 }
 
-window {
-    background-color: #7C818C;
+#window #outer-box {
+    /* The name of the search bar */
+    /* The name of the scrolled window containing all of the entries */
 }
 
-#input {
-    margin: 5px;
-    border-radius: 0px;
+#window #outer-box #input {
+    background-color: rgba(24, 24, 24, 0.6);
+    color: #f2f2f2;
     border: none;
-    border-bottom: 3px solid black;
-    background-color: #383C4A;
-    color: white;
+    border-bottom: 1px solid rgba(24, 24, 24, 0.2);
+    padding: 0.8rem 1rem;
+    font-size: 1.5rem;
+    border-radius: 1rem 1rem 0 0;
 }
 
-#inner-box {
-    background-color: #383C4A;
-
+#window #outer-box #input:focus,
+#window #outer-box #input:focus-visible,
+#window #outer-box #input:active {
+    border: none;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
 }
 
-#outer-box {
-    margin: 5px;
-    padding: 20px;
-    background-color: #383C4A;
+#window #outer-box #scroll {
+    /* The name of the box containing all of the entries */
 }
 
-#scroll {}
-
-#text {
-    padding: 5px;
-    color: white;
+#window #outer-box #scroll #inner-box {
+    /* The name of all entries */
+    /* The name of all boxes shown when expanding  */
+    /* entries with multiple actions */
 }
 
-#entry:nth-child(even) {
-    background-color: #404552;
+#window #outer-box #scroll #inner-box #entry {
+    color: #fff;
+    background-color: rgba(24, 24, 24, 0.1);
+    padding: 0.6rem 1rem;
+    /* The name of all images in entries displayed in image mode */
+    /* The name of all the text in entries */
 }
 
-#entry:selected {
-    background-color: #5291e2;
+#window #outer-box #scroll #inner-box #entry #img {
+    width: 1rem;
+    margin-right: 0.5rem;
 }
 
-#text:selected {}
+#window #outer-box #scroll #inner-box #entry:selected {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    outline: none;
+}
