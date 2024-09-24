@@ -48,12 +48,17 @@ alias fetch="pokeget --hide-name mudkip | fastfetch --file-raw -"
 alias cd="z"
 alias cdi="zi"
 alias cat="bat -pp" # plain style (only code) and disables less paging
+alias mkdir="mkdir -p"
 
-export PATH=/bin:/usr/bin:/usr/local/bin:/sbin:${PATH}
+export GOPATH=$HOME/go
+
+export PATH="/bin:/usr/bin:/usr/local/bin:/sbin:${PATH}"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/zig:$PATH"
 export PATH="$HOME/.jenv/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="/usr/local/go/bin:$PATH"
+export PATH="$GOPATH/bin:$PATH"
 export PATH="$HOME/idafree-8.4:$PATH"
 
 eval "$(jenv init -)"
