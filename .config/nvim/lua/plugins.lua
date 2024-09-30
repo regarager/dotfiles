@@ -94,22 +94,8 @@ return {
         desc = "Buffer Local Keymaps (which-key)",
       },
     },
-  }, -- which-key
-  {
-    "folke/noice.nvim",
-    event = "VeryLazy",
-    opts = {
-      -- add any options here
-    },
-    dependencies = {
-      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-      "MunifTanjim/nui.nvim",
-      -- OPTIONAL:
-      --   `nvim-notify` is only needed, if you want to use the notification view.
-      --   If not available, we use `mini` as the fallback
-      "rcarriga/nvim-notify",
-    }
-  },                                                                                 -- replaces some message uis
+  },                                                                                 -- which-key
+  -- replaces some message uis
   { "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } }, -- Lualine
   { "regarager/jclasses",        dependencies = { "MunifTanjim/nui.nvim" } },        -- Make classes for Java
   { "andweeb/presence.nvim" }
