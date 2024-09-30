@@ -1,6 +1,7 @@
 local list = {
   "typos_lsp",
   "bashls",
+  "biome",
   "clangd",
   "cssls",
   "cssmodules_ls",
@@ -10,7 +11,6 @@ local list = {
   "jdtls",
   "texlab",
   "lua_ls",
-  "prettier",
   "pyright",
   "rust_analyzer",
   "tailwindcss",
