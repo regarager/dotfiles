@@ -1,7 +1,7 @@
 vim.opt.ignorecase = true
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.autoindent = true
 vim.opt.number = true
@@ -14,13 +14,13 @@ require("config.lazy")
 
 require("plugins")
 require("lualine").setup({
-    options = {
-        theme = "horizon"
-    }
+  options = {
+    theme = "horizon"
+  }
 })
 require("mason").setup()
 require("mason-lspconfig").setup {
-    ensure_installed = require("config.servers"),
+  ensure_installed = require("config.servers"),
 }
 
 require("java").setup()

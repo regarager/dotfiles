@@ -78,7 +78,7 @@ return {
     -- Language Plugins
     { "fatih/vim-go" },        -- Go
     { "nvim-java/nvim-java" }, -- Java
-    { "ziglang/zig.vim" }, -- Zig
+    { "ziglang/zig.vim" },     -- Zig
 
     -- Misc.
     {
