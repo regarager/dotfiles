@@ -9,6 +9,7 @@ local list = {
   "gopls",
   "html",
   "hyprls",
+  "intelephense",
   "jdtls",
   "jsonls",
   "texlab",

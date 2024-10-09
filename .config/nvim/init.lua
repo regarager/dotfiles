@@ -19,10 +19,6 @@ require("lualine").setup({
     theme = "horizon"
   }
 })
-require("mason").setup()
-require("mason-lspconfig").setup {
-  ensure_installed = require("config.servers"),
-}
 
 require("java").setup()
 

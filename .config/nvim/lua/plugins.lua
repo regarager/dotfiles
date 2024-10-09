@@ -3,11 +3,11 @@ return {
   { "williamboman/mason.nvim" },                               -- Mason (manages LSPs, linters, etc.)
   { "williamboman/mason-lspconfig.nvim" },                     -- Mason setup with lspconfig
   { "neovim/nvim-lspconfig" },                                 -- LSP config
+  { "mfussenegger/nvim-dap" },                                 -- Debug Adapter Protocol
   { "hrsh7th/nvim-cmp" },                                      -- Autocomplete
   { "hrsh7th/cmp-nvim-lsp" },
   { "onsails/lspkind.nvim" },                                  -- Autocomplete icons
   { "VonHeikemen/lsp-zero.nvim" },                             -- LSP config
-  { "mfussenegger/nvim-dap" },                                 -- Debug Adapter Protocol
   { "mhartington/formatter.nvim" },                            -- Autoformat
   { "MunifTanjim/prettier.nvim" },                             -- Prettier
   { "norcalli/nvim-colorizer.lua" },                           -- Highlight colors
@@ -25,7 +25,7 @@ return {
           line = "<C-/>",
         },
         opleader = {
-          block = "<C-/>"
+          line = "<C-/>"
         }
       })
     end
@@ -65,7 +65,6 @@ return {
   { "xiyaowong/transparent.nvim" },  -- Transparent background
   { "fatih/vim-go" },                -- Go
   { "nvim-java/nvim-java" },         -- Java
-  { "ziglang/zig.vim" },             -- Zig
   {
     "folke/which-key.nvim",
     event = "VeryLazy",
