@@ -1,82 +1,83 @@
 {
-    "layer": "top",
-    "modules-left": [
-        "cpu",
-        "memory",
-        "tray"
+  "layer": "top",
+  "modules-left": [
+    "custom/launcher",
+    "cpu",
+    "memory",
+    "tray"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "pulseaudio",
+    "battery",
+    "clock"
+  ],
+  "pulseaudio": {
+    "scroll-step": 5,
+    "format": "{icon} {volume}%",
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": "Ethernet",
+    "tooltip": false
+  },
+  "temperature": {
+    "format": " {temperatureC}°C",
+    "format-critical": " {temperatureC}°C",
+    "critical-threshold": 80,
+    "interval": 5,
+    "tooltip": false
+  },
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 20,
+      "critical": 10
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": [
+      "󰂎",
+      "󱊡",
+      "󱊢",
+      "󱊣"
     ],
-    "modules-center": [
-        "hyprland/workspaces"
-    ],
-    "modules-right": [
-        "pulseaudio",
-        "battery",
-        "clock"
-    ],
-    "pulseaudio": {
-        "scroll-step": 5,
-        "format": "{icon} {volume}%",
-        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-        "format-icons": {
-            "default": [
-                "",
-                "",
-                ""
-            ]
-        }
-    },
-    "network": {
-        "format-wifi": "  {essid}",
-        "format-ethernet": "Ethernet",
-        "tooltip": false
-    },
-    "temperature": {
-        "format": " {temperatureC}°C",
-        "format-critical": " {temperatureC}°C",
-        "critical-threshold": 80,
-        "interval": 5,
-        "tooltip": false
-    },
-    "battery": {
-        "states": {
-            "good": 95,
-            "warning": 20,
-            "critical": 10
-        },
-        "format": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
-        "format-alt": "{time} {icon}",
-        "format-icons": [
-            "󰂎",
-            "󱊡",
-            "󱊢",
-            "󱊣"
-        ],
-        "interval": 5,
-    },
-    "tray": {
-        "icon-size": 18,
-        "spacing": 10
-    },
-    "clock": {
-        "format": " {:%I:%M %p 󰃶 %m/%d/%Y}",
-        "tooltip": false
-    },
-    "cpu": {
-        "interval": 5,
-        "format": " {usage}%",
-        "max-length": 10
-    },
-    "memory": {
-        "interval": 5,
-        "format": " {}%",
-        "max-length": 10,
-    },
-    "custom/launcher": {
-        "format": "󰣇",
-        "tooltip": false,
-        "on-click": "wofi --show drun",
-        "on-click-right": "killall wofi"
-    },
+    "interval": 5
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10
+  },
+  "clock": {
+    "format": " {:%I:%M %p 󰃶 %m/%d/%Y}",
+    "tooltip": false
+  },
+  "cpu": {
+    "interval": 5,
+    "format": " {usage}%",
+    "max-length": 10
+  },
+  "memory": {
+    "interval": 5,
+    "format": " {}%",
+    "max-length": 10
+  },
+  "custom/launcher": {
+    "format": "󰣇",
+    "tooltip": false,
+    "on-click": "pidof wofi || wofi --show drun -I",
+    "on-click-right": "killall wofi"
+  }
 }
