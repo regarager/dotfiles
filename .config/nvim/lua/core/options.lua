@@ -26,7 +26,12 @@ opt.clipboard:append("unnamedplus")
 opt.splitright = true
 opt.splitbelow = true
 
-vim.cmd.colorscheme("tokyonight-moon")
+vim.api.nvim_create_autocmd("BufReadPost", {
+  pattern = { "*.stpl" },
+  command = "set filetype=html"
+})
+
+vim.cmd.colorscheme("onedark_vivid")
 vim.cmd("TransparentEnable")
 
 vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#999999" })
