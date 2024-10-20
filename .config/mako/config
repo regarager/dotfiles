@@ -1,8 +1,7 @@
 default-timeout=3000
 
-border-radius=8
-border-size=1
-border-color=#00000060
+border-radius=12
+border-size=0
 
 padding=12
-background-color=#555555ff
+background-color=#1818257f
