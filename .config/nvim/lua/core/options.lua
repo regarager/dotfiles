@@ -31,7 +31,7 @@ vim.api.nvim_create_autocmd("BufReadPost", {
   command = "set filetype=html"
 })
 
-vim.cmd.colorscheme("onedark_vivid")
+vim.cmd.colorscheme("onedark")
 vim.cmd("TransparentEnable")
 
 vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#999999" })
