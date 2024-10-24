@@ -20,7 +20,7 @@ bindings = [
 
 [general]
 import = [
-	"~/.config/alacritty/themes/themes/tokyo-night-storm.toml"
+	"~/.config/alacritty/themes/themes/everforest_dark.toml.toml"
 ]
 
 [terminal]
