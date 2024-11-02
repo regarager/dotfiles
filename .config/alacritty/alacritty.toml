@@ -4,7 +4,7 @@ TERM = "xterm-256color"
 [window]
 padding.x = 0
 padding.y = 0
-opacity = 0.70
+opacity = 0.75
 
 [font]
 normal.family = "ComicShanns Nerd Font"
@@ -22,5 +22,3 @@ bindings = [
 import = [
 	"~/.config/alacritty/themes/themes/everforest_dark.toml.toml"
 ]
-
-[terminal]
