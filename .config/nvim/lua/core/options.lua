@@ -8,7 +8,8 @@ opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
 
-opt.wrap = false
+opt.wrap = true
+opt.linebreak = true
 
 opt.ignorecase = true
 opt.smartcase = true
@@ -25,6 +26,7 @@ opt.clipboard:append("unnamedplus")
 
 opt.splitright = true
 opt.splitbelow = true
+
 
 vim.api.nvim_create_autocmd("BufReadPost", {
   pattern = { "*.stpl" },
