@@ -5,6 +5,7 @@ yay -S zsh stow alacritty neovim zen-browser-bin \
     hyprland hypridle hyprpaper hyprshot hyprlock mako \
     brightnessctl xdg-desktop-portal-gtk xdg-desktop-portal-hyprland waybar \
     wofi breeze breeze-gtk qt6ct qt5ct polkit-gnome xorg-xhost iwgtk \
+    bluez bluez-utils overskride \
     ttf-jetbrains-mono-nerd ttf-space-mono-nerd ttf-comic-shanns-nerd ttf-0xproto-nerd nodejs unzip \
     vesktop
 
