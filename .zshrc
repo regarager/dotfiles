@@ -61,8 +61,10 @@ export PATH="/usr/local/go/bin:$PATH"
 export PATH="$GOPATH/bin:$PATH"
 export PATH="$HOME/idafree-8.4:$PATH"
 
+autoload -U compinit; compinit
+source ~/fzf-tab/fzf-tab.plugin.zsh
+
 eval "$(jenv init -)"
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-
 eval $(thefuck --alias)
