@@ -40,6 +40,7 @@ export GPG_TTY=$(tty) # for gpg stuff
 
 export HYPRSHOT_DIR="$HOME/Pictures/Screenshots"
 export BAT_THEME="OneHalfDark"
+export MANPAGER='nvim +Man!'
 
 alias ls="eza"
 alias la="eza -a"
