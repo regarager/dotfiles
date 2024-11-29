@@ -6,4 +6,5 @@ return {
   "sainnhe/everforest",
   "catppuccin/nvim",
   "xiyaowong/transparent.nvim",
+  "ribru17/bamboo.nvim",
 }

@@ -33,9 +33,10 @@ vim.api.nvim_create_autocmd("BufReadPost", {
   command = "set filetype=html"
 })
 
-vim.cmd.colorscheme("everforest")
+vim.cmd.colorscheme("bamboo")
 vim.cmd("TransparentEnable")
+vim.cmd("set mouse=")
 
-vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#999999" })
-vim.api.nvim_set_hl(0, "LineNr", { fg = "#e6e6e6" })
-vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#999999" })
+vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#aaaaaa" })
+vim.api.nvim_set_hl(0, "LineNr", { fg = "#aaaaaa", bold = true })
+vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#aaaaaa" })
