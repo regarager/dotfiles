@@ -6,7 +6,7 @@ import = [
 [window]
 padding.x = 0
 padding.y = 0
-opacity = 0.75
+opacity = 0.85
 
 [font]
 normal.family = "ComicShanns Nerd Font"
