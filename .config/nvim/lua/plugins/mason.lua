@@ -33,7 +33,6 @@ return {
         "gopls",
         "html",
         "hyprls",
-        "intelephense",
         "jdtls",
         "jsonls",
         "texlab",
