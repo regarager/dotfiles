@@ -13,3 +13,5 @@ $ cd dotfiles
 Install `yay` (an AUR helper) with `sudo pacman -S yay`.
 
 Then, run the install script `install.sh` **without sudo**.
+
+For Java setup (with `jenv`), run `java_setup.sh`.
