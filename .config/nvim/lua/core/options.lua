@@ -27,16 +27,14 @@ opt.clipboard:append("unnamedplus")
 opt.splitright = true
 opt.splitbelow = true
 
-
 vim.api.nvim_create_autocmd("BufReadPost", {
   pattern = { "*.stpl" },
   command = "set filetype=html"
 })
 
-vim.cmd.colorscheme("bamboo")
+vim.cmd.colorscheme("tokyonight-storm")
 vim.cmd("TransparentEnable")
-vim.cmd("set mouse=")
 
-vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#aaaaaa" })
-vim.api.nvim_set_hl(0, "LineNr", { fg = "#aaaaaa", bold = true })
-vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#aaaaaa" })
+vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#bbbbbb" })
+vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#ff9933", bold = true })
+vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#bbbbbb" })
