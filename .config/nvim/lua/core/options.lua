@@ -41,5 +41,4 @@ vim.api.nvim_create_autocmd("Colorscheme", {
   end
 })
 
-vim.cmd.colorscheme("tokyonight-storm")
-vim.cmd("TransparentEnable")
+vim.cmd.colorscheme("tokyonight-moon")

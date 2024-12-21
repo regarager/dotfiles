@@ -69,3 +69,6 @@ eval "$(jenv init -)"
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 eval $(thefuck --alias)
+
+# To customize prompt, run `p10k configure` or edit ~/dotfiles/.p10k.zsh.
+[[ ! -f ~/dotfiles/.p10k.zsh ]] || source ~/dotfiles/.p10k.zsh

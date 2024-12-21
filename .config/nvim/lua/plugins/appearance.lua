@@ -1,6 +1,5 @@
 return {
   "folke/tokyonight.nvim",
-  "xiyaowong/transparent.nvim",
   -- "rebelot/kanagawa.nvim",
   -- "olimorris/onedarkpro.nvim",
   -- "EdenEast/nightfox.nvim",
