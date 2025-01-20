@@ -5,7 +5,7 @@ return {
     config = function()
       require("lualine").setup({
         options = {
-          theme = "everforest"
+          theme = "horizon"
         }
       })
     end
