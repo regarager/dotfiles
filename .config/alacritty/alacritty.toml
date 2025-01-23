@@ -4,12 +4,10 @@ import = [
 ]
 
 [window]
-padding.x = 0
-padding.y = 0
 opacity = 1.0
 
 [font]
-normal.family = "ComicShanns Nerd Font"
+normal.family = "ComicShannsMono Nerd Font Propo"
 size = 11
 
 [keyboard]
