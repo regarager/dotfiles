@@ -1,0 +1,14 @@
+font-family = "ComicShannsMono Nerd Font Propo"
+font-size = 11
+
+theme = tokyonight_moon
+
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
+
+title = " "
+window-inherit-working-directory = true
+window-decoration = false
+
+keybind = ctrl+t=new_tab
