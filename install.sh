@@ -16,6 +16,7 @@ echo "Finished copying dotfiles"
 
 git clone https://github.com/alacritty/alacritty-theme .config/alacritty/themes
 git clone https://github.com/Aloxaf/fzf-tab ~
+git clone https://github.com/regarager/zsh-prompt ~
 
 echo "Setting up git-delta options"
 git config --global core.pager delta
