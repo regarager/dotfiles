@@ -5,7 +5,7 @@
 #   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 # fi
 
-source ~/Projects/zsh-prompt/prompt.zsh
+source ~/zsh-prompt/prompt.zsh
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
