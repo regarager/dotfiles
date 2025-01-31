@@ -44,7 +44,7 @@ return { {
     vim.keymap.set("n", "fb", builtin.buffers, {})
     vim.keymap.set("n", "fh", builtin.help_tags, {})
     vim.keymap.set("n", "fc", builtin.current_buffer_fuzzy_find, {})
-    vim.keymap.set("n", "fr", builtin.lsp_references, {})
+    vim.keymap.set("n", "fs", builtin.lsp_workspace_symbols, {})
     vim.keymap.set("n", "fth", ":Telescope themes<CR>", { noremap = true, silent = true, desc = "Theme Switcher" })
   end
 }, {
