@@ -29,7 +29,6 @@ window#waybar.hidden {
   /* Use box-shadow instead of border so the text isn't offset */
   padding: 6px 18px;
   margin: 6px 3px;
-  border-radius: 4px;
   background-color: rgba(24, 24, 37, 0.5);
   color: #ffffff;
 }
@@ -59,11 +58,18 @@ window#waybar.hidden {
 #network,
 #clock,
 #tray {
-  border-radius: 4px;
   margin: 6px 3px;
   padding: 6px 12px;
   background-color: rgba(24, 24, 37, 0.5);
   color: #ffffff;
+}
+
+#cpu {
+  margin-left: 12px;
+}
+
+#clock {
+  margin-right: 12px;
 }
 
 #custom-launcher {
@@ -73,7 +79,6 @@ window#waybar.hidden {
   padding-top: 6px;
   padding-bottom: 6px;
   padding-right: 14px;
-  border-radius: 4px;
   transition: none;
   color: #1793D1;
   background-color: rgba(24, 24, 37, 0.5);
@@ -131,7 +136,6 @@ window#waybar.hidden {
 **/
 
 tooltip {
-  border-radius: 8px;
   padding: 15px;
   background-color: #131822;
 }
@@ -139,4 +143,20 @@ tooltip {
 tooltip label {
   padding: 5px;
   background-color: #131822;
+}
+
+
+#cpu,
+#memory,
+#custom-power,
+#custom-launcher,
+#battery,
+#backlight,
+#pulseaudio,
+#network,
+#clock,
+#tray,
+tooltip,
+#workspaces button {
+  border-radius: 6px;
 }
