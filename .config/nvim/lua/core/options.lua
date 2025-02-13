@@ -28,17 +28,17 @@ opt.splitright = true
 opt.splitbelow = true
 
 vim.api.nvim_create_autocmd("BufReadPost", {
-  pattern = { "*.stpl" },
-  command = "set filetype=html"
+	pattern = { "*.stpl" },
+	command = "set filetype=html",
 })
 
 -- ensures line number colors are correct even after switching theme
 vim.api.nvim_create_autocmd("Colorscheme", {
-  callback = function()
-    vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#bbbbbb" })
-    vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#ff9933", bold = true })
-    vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#bbbbbb" })
-  end
+	callback = function()
+		vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#bbbbbb" })
+		vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#ff9933", bold = true })
+		vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#bbbbbb" })
+	end,
 })
 
 vim.cmd.colorscheme("tokyonight-moon")
