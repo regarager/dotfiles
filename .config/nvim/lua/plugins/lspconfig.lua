@@ -5,6 +5,8 @@ return {
 		"hrsh7th/cmp-nvim-lsp",
 	},
 	config = function()
+		require("java").setup()
+
 		local lspconfig = require("lspconfig")
 
 		local mason_lspconfig = require("mason-lspconfig")

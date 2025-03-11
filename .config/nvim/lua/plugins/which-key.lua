@@ -3,6 +3,7 @@ return {
 		"folke/which-key.nvim",
 		event = "VeryLazy",
 		opts = {},
+		enabled = false,
 		keys = {
 			{
 				"<leader>?",

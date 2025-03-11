@@ -1,4 +1,4 @@
 return {
-  "fatih/vim-go",
-  "regarager/jclasses",
+	"fatih/vim-go",
+	"nvim-java/nvim-java",
 }
