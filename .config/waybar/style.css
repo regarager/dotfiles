@@ -65,6 +65,10 @@ window#waybar.hidden {
   color: #ffffff;
 }
 
+#language {
+  padding: 6px 15px;
+}
+
 #cpu {
   margin-left: 12px;
 }

@@ -81,7 +81,7 @@
     "max-length": 10
   },
   "hyprland/language": {
-    "format": " {short}"
+    "format": "{shortDescription}"
   },
   "custom/launcher": {
     "format": "󰣇",
