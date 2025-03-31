@@ -28,4 +28,5 @@ echo "Finished setting up git-delta options"
 
 echo "Run 'nvim' to get start automatic setup for Neovim"
 echo "Run 'java_setup.sh' for Java setup with jenv"
+echo "Run 'blackarch_setup.sh' to add the Blackarch repository"
 echo "Enjoy\!"
