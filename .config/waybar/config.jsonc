@@ -10,6 +10,7 @@
     "hyprland/workspaces"
   ],
   "modules-right": [
+    "hyprland/language",
     "pulseaudio",
     "battery",
     "clock"
@@ -78,6 +79,9 @@
     "interval": 5,
     "format": " {}%",
     "max-length": 10
+  },
+  "hyprland/language": {
+    "format": " {short}"
   },
   "custom/launcher": {
     "format": "󰣇",
