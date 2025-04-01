@@ -17,7 +17,8 @@ return {
 				yaml = { "prettier" },
 				lua = { "stylua" },
 				python = { "black", "isort" },
-				cpp = { "clang-format" },
+				cpp = { "astyle" },
+				java = { "astyle" },
 				["*"] = { "trim_whitespace" },
 			},
 			format_on_save = {
@@ -26,6 +27,12 @@ return {
 				timeout_ms = 1000,
 			},
 		})
+
+		require("conform").formatters.astyle = {
+			inherit = false,
+			command = "astyle",
+			args = { "--style=google", "-s2" },
+		}
 
 		vim.api.nvim_create_autocmd("BufWritePre", {
 			pattern = "*",

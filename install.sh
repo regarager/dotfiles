@@ -1,5 +1,5 @@
 yay -S zsh stow alacritty ghostty neovim zen-browser-bin \
-    jenv jdk8-openjdk jdk11-openjdk jdk17-openjdk jdk-openjdk npm nodejs rust \
+    jenv jdk8-openjdk jdk11-openjdk jdk17-openjdk jdk-openjdk npm nodejs rust go astyle \
     eza bat fastfetch fzf unzip ripgrep grep git-delta zoxide zsh-syntax-highlighting less net-tools github-cli-git battop bashtop thefuck \
     hyprland hypridle hyprpaper hyprshot hyprlock mako \
     brightnessctl xdg-desktop-portal-gtk xdg-desktop-portal-hyprland waybar \
