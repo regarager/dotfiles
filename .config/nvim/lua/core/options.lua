@@ -27,8 +27,10 @@ opt.clipboard:append("unnamedplus")
 opt.splitright = true
 opt.splitbelow = true
 
+opt.pumheight = 20
+
 vim.api.nvim_create_autocmd("BufReadPost", {
-	pattern = { "*.stpl" },
+	pattern = { "*.stpl", "*.ejs" },
 	command = "set filetype=html",
 })
 

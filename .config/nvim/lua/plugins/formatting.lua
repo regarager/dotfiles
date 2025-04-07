@@ -28,10 +28,19 @@ return {
 			},
 		})
 
+		-- Source: https://astyle.sourceforge.net/astyle.html
 		require("conform").formatters.astyle = {
 			inherit = false,
 			command = "astyle",
-			args = { "--style=google", "-s2" },
+			args = {
+				"--style=google",
+				"--indent=spaces=2",
+				"--break-blocks",
+				"--pad-oper",
+				"--pad-include",
+				"--pad-header",
+				"--unpad-paren",
+			},
 		}
 
 		vim.api.nvim_create_autocmd("BufWritePre", {
