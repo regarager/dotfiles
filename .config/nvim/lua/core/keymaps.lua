@@ -11,6 +11,7 @@ keymap.set("n", "<leader>j", "<C-w><down>", { desc = "Move to window below" })
 keymap.set("n", "<leader>k", "<C-w><up>", { desc = "Move to above window" })
 keymap.set("n", "<leader>l", "<C-w><right>", { desc = "Move to right window" })
 keymap.set("n", "<tab>", "v>", { desc = "Indent line" })
+keymap.set("n", "<tab>", "<tab>v>a", { desc = "Indent line" })
 keymap.set("v", "<tab>", ">", { desc = "Indent selection" })
 
 keymap.set("n", "<leader>t", ":ToggleTerm<CR>", { desc = "Toggle terminal" })
