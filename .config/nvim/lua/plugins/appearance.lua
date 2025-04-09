@@ -1,8 +1,7 @@
 return {
 	"folke/tokyonight.nvim",
-	"tiagovla/tokyodark.nvim",
-	{ "rose-pine/neovim", name = "rose-pine" },
-	-- "rebelot/kanagawa.nvim",
+	-- { "rose-pine/neovim", name = "rose-pine" },
+	"rebelot/kanagawa.nvim",
 	-- "olimorris/onedarkpro.nvim",
 	-- "EdenEast/nightfox.nvim",
 	-- "sainnhe/everforest",
@@ -10,5 +9,5 @@ return {
 	-- "ribru17/bamboo.nvim",
 	-- "dasupradyumna/midnight.nvim",
 	-- "AlexvZyl/nordic.nvim",
-	-- "sam4llis/nvim-tundra"
+	-- "sam4llis/nvim-tundra",
 }
