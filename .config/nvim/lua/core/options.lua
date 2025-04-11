@@ -43,4 +43,4 @@ vim.api.nvim_create_autocmd("Colorscheme", {
 	end,
 })
 
-require("current-theme")
+vim.cmd("colorscheme tokyonight-moon")

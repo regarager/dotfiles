@@ -34,6 +34,12 @@ return {
 				pickers = {
 					find_files = { follow = true },
 				},
+
+				extensions = {
+					themes = {
+						persist = { enable = false },
+					},
+				},
 			})
 
 			local telescope = require("telescope")
