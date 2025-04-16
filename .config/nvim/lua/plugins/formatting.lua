@@ -19,6 +19,7 @@ return {
 				lua = { "stylua" },
 				python = { "black", "isort" },
 				cpp = { "astyle" },
+				c = { "astyle" },
 				java = { "astyle" },
 				["*"] = { "trim_whitespace" },
 			},
@@ -41,6 +42,7 @@ return {
 				"--pad-include",
 				"--pad-header",
 				"--unpad-paren",
+				"--align-pointer=type",
 			},
 		}
 

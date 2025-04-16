@@ -43,4 +43,6 @@ vim.api.nvim_create_autocmd("Colorscheme", {
 	end,
 })
 
+vim.diagnostic.config({ virtual_text = true })
+
 vim.cmd("colorscheme tokyonight-moon")
