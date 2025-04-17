@@ -1,12 +1,12 @@
 yay -S zsh stow alacritty ghostty neovim zen-browser-bin \
-    jenv jdk8-openjdk jdk11-openjdk jdk17-openjdk jdk-openjdk npm nodejs rust go astyle \
-    eza bat fastfetch fzf unzip ripgrep grep git-delta zoxide zsh-syntax-highlighting less net-tools github-cli-git battop btop thefuck \
-    hyprland hypridle hyprpaper hyprshot hyprlock mako \
-    brightnessctl xdg-desktop-portal-gtk xdg-desktop-portal-hyprland waybar \
-    wofi breeze breeze-gtk qt6ct qt5ct polkit-gnome xorg-xhost iwgtk iwd networkmanager network-manager-applet ly \
-    bluez bluez-utils overskride \
-    ttf-jetbrains-mono-nerd ttf-space-mono-nerd otf-comicshanns-nerd ttf-0xproto-nerd noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
-    vesktop
+  jenv jdk8-openjdk jdk11-openjdk jdk17-openjdk jdk-openjdk npm nodejs rust go astyle \
+  eza bat fastfetch fzf unzip ripgrep grep git-delta zoxide zsh-syntax-highlighting less net-tools github-cli-git battop btop thefuck \
+  hyprland hypridle hyprpaper hyprshot hyprlock mako \
+  brightnessctl xdg-desktop-portal-gtk xdg-desktop-portal-hyprland waybar \
+  wofi breeze breeze-gtk qt6ct qt5ct polkit-gnome xorg-xhost iwgtk iwd networkmanager network-manager-applet ly \
+  bluez bluez-utils overskride \
+  ttf-jetbrains-mono-nerd ttf-space-mono-nerd otf-comicshanns-nerd ttf-0xproto-nerd noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
+  vesktop
 
 cargo install pokeget
 
