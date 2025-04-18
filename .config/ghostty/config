@@ -1,7 +1,7 @@
 command = /usr/bin/zsh
 
-font-family = "ComicShannsMono Nerd Font Propo"
-font-size = 11
+font-family = "RobotoMono Nerd Font Propo"
+font-size = 10
 
 theme = tokyonight_moon
 
@@ -14,4 +14,3 @@ window-inherit-working-directory = true
 window-decoration = false
 
 keybind = ctrl+t=new_tab
-
