@@ -1,7 +1,11 @@
-yay -S zsh stow alacritty ghostty neovim zen-browser-bin \
+echo "Installing yay"
+git clone https://aur.archlinux.org/yay.git
+cd yay && makepkg -si && cd ..
+
+yay -S --needed zsh stow alacritty ghostty neovim zen-browser-bin \
   jenv jdk8-openjdk jdk11-openjdk jdk17-openjdk jdk-openjdk npm nodejs rust go astyle \
   eza bat fastfetch fzf unzip ripgrep grep git-delta zoxide zsh-syntax-highlighting less net-tools github-cli-git battop btop thefuck cpupower \
-  hyprland hypridle hyprpaper hyprshot hyprlock mako \
+  hyprland hypridle hyprpaper grimblast hyprlock mako \
   brightnessctl xdg-desktop-portal-gtk xdg-desktop-portal-hyprland waybar \
   wofi breeze breeze-gtk qt6ct qt5ct polkit-gnome xorg-xhost iwgtk iwd networkmanager network-manager-applet ly \
   bluez bluez-utils overskride \
