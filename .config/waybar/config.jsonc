@@ -1,19 +1,18 @@
 {
   "layer": "top",
   "modules-left": [
-    // "custom/launcher",
-    "cpu",
-    "memory",
-    "tray"
-  ],
-  "modules-center": [
     "hyprland/workspaces"
   ],
+  "modules-center": [
+    "clock"
+  ],
   "modules-right": [
+    "tray",
     "hyprland/language",
     "pulseaudio",
     "battery",
-    "clock"
+    "cpu",
+    "memory"
   ],
   "pulseaudio": {
     "scroll-step": 5,
@@ -82,11 +81,5 @@
   },
   "hyprland/language": {
     "format": "{shortDescription}"
-  },
-  "custom/launcher": {
-    "format": "󰣇",
-    "tooltip": false,
-    "on-click": "pidof wofi || wofi --show drun -I",
-    "on-click-right": "killall wofi"
   }
 }

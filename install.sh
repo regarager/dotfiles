@@ -2,12 +2,14 @@ echo "Installing yay"
 git clone https://aur.archlinux.org/yay.git
 cd yay && makepkg -si && cd ..
 
-yay -S --needed zsh stow alacritty ghostty neovim zen-browser-bin \
+yay -S --noconfirm --needed \
+  zsh stow ghostty neovim zen-browser-bin \
+  eza bat fastfetch fzf unzip ripgrep grep git-delta zoxide thefuck less net-tools \
+  zsh-syntax-highlighting github-cli battop btop cpupower \
   jenv jdk8-openjdk jdk11-openjdk jdk17-openjdk jdk-openjdk npm nodejs rust go astyle \
-  eza bat fastfetch fzf unzip ripgrep grep git-delta zoxide zsh-syntax-highlighting less net-tools github-cli-git battop btop thefuck cpupower \
-  hyprland hypridle hyprpaper grimblast hyprlock mako \
-  brightnessctl xdg-desktop-portal-gtk xdg-desktop-portal-hyprland waybar \
-  wofi breeze breeze-gtk qt6ct qt5ct polkit-gnome xorg-xhost iwgtk iwd networkmanager network-manager-applet ly \
+  hyprland hypridle hyprpaper grimblast hyprlock mako ly waybar \
+  brightnessctl xdg-desktop-portal-gtk xdg-desktop-portal-hyprland \
+  wofi breeze breeze-gtk qt6ct qt5ct polkit-gnome xorg-xhost iwgtk iwd networkmanager network-manager-applet \
   bluez bluez-utils overskride \
   ttf-jetbrains-mono-nerd ttf-roboto-mono-nerd otf-comicshanns-nerd ttf-0xproto-nerd noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
   vesktop
