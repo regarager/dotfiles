@@ -45,4 +45,4 @@ vim.api.nvim_create_autocmd("Colorscheme", {
 
 vim.diagnostic.config({ virtual_text = true })
 
-vim.cmd("colorscheme tokyonight-moon")
+vim.cmd("colorscheme dracula")

@@ -3,7 +3,7 @@ command = /usr/bin/zsh
 font-family = "RobotoMono Nerd Font Propo"
 font-size = 10
 
-theme = tokyonight_moon
+theme = Dracula
 
 cursor-style = block
 cursor-style-blink = false
