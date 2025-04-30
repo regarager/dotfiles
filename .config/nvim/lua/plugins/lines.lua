@@ -13,7 +13,15 @@ return {
 					lualine_a = { { "mode", separator = { left = "" }, right_padding = 2 } },
 					lualine_b = { "filename", "branch" },
 					lualine_c = {
-						"%=",
+						{
+							function()
+								return "Recording @" .. vim.fn.reg_recording()
+							end,
+							cond = function()
+								return vim.fn.reg_recording() ~= ""
+							end,
+							color = { fg = "#ff9e64" },
+						},
 					},
 					lualine_x = {},
 					lualine_y = { "filetype", "progress" },

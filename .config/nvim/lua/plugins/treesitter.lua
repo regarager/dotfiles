@@ -28,6 +28,7 @@ return {
 					"typescript",
 					"markdown_inline",
 					"vim",
+					"typst",
 				},
 				sync_install = false,
 				auto_install = true,
