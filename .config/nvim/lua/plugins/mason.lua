@@ -30,6 +30,7 @@ return {
 				"cssls",
 				"cssmodules_ls",
 				"css_variables",
+				"tinymist",
 				"gopls",
 				"html",
 				"hyprls",
@@ -51,6 +52,7 @@ return {
 			"isort",
 			"black",
 			"clang-format",
+			"typstfmt",
 		})
 	end,
 }

@@ -29,5 +29,12 @@ return {
 				})
 			end,
 		})
+
+		lspconfig["tinymist"].setup({
+			settings = {
+				formatterMode = "typstyle",
+				exportPdf = "onSave",
+			},
+		})
 	end,
 }
