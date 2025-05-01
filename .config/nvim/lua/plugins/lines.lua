@@ -12,18 +12,14 @@ return {
 				sections = {
 					lualine_a = { { "mode", separator = { left = "" }, right_padding = 2 } },
 					lualine_b = { "filename", "branch" },
-					lualine_c = {
+					lualine_c = {},
+					lualine_x = {
 						{
-							function()
-								return "Recording @" .. vim.fn.reg_recording()
-							end,
-							cond = function()
-								return vim.fn.reg_recording() ~= ""
-							end,
+							require("noice").api.statusline.mode.get,
+							cond = require("noice").api.statusline.mode.has,
 							color = { fg = "#ff9e64" },
 						},
 					},
-					lualine_x = {},
 					lualine_y = { "filetype", "progress" },
 					lualine_z = {
 						{ "location", separator = { right = "" }, left_padding = 2 },
