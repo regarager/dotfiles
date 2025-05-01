@@ -1,6 +1,6 @@
 command = /usr/bin/zsh
 
-font-family = "RobotoMono Nerd Font Propo"
+font-family = "Maple Mono NF"
 font-size = 10
 
 theme = Dracula

@@ -11,7 +11,7 @@ yay -S --noconfirm --needed \
   brightnessctl xdg-desktop-portal-gtk xdg-desktop-portal-hyprland \
   wofi breeze breeze-gtk qt6ct qt5ct polkit-gnome xorg-xhost iwgtk iwd networkmanager network-manager-applet \
   bluez bluez-utils overskride \
-  ttf-jetbrains-mono-nerd ttf-roboto-mono-nerd otf-comicshanns-nerd ttf-0xproto-nerd noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
+  ttf-roboto-mono-nerd otf-comicshanns-nerd maplemono-nf otf-apple-sf-pro noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
   vesktop
 
 cargo install pokeget
