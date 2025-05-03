@@ -3,7 +3,7 @@ command = /usr/bin/zsh
 font-family = "Maple Mono NF"
 font-size = 10
 
-theme = Dracula
+theme = duskfox
 
 cursor-style = block
 cursor-style-blink = false
@@ -17,4 +17,4 @@ keybind = ctrl+t=new_tab
 keybind = alt+v=new_split:right
 keybind = alt+h=new_split:down
 
-background = #282A36
+background = #232136
