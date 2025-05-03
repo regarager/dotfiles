@@ -3,7 +3,15 @@ return {
 	{
 		"nvim-java/nvim-java",
 	},
-	{ "OXY2DEV/markview.nvim", lazy = false },
+	{
+		"OXY2DEV/markview.nvim",
+		lazy = false,
+		opts = {
+			typst = {
+				enable = false,
+			},
+		},
+	},
 	{
 		"kaarmu/typst.vim",
 		ft = "typst",

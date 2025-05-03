@@ -52,7 +52,7 @@ return {
 			"isort",
 			"black",
 			"clang-format",
-			"typstfmt",
+			"typstyle",
 		})
 	end,
 }
