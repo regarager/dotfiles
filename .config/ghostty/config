@@ -14,3 +14,7 @@ window-inherit-working-directory = true
 window-decoration = false
 
 keybind = ctrl+t=new_tab
+keybind = alt+v=new_split:right
+keybind = alt+h=new_split:down
+
+background = #282A36
