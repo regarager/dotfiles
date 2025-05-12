@@ -34,7 +34,6 @@ return {
 				"gopls",
 				"html",
 				"hyprls",
-				"jdtls",
 				"jsonls",
 				"texlab",
 				"ts_ls",
