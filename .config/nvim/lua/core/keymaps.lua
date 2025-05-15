@@ -11,6 +11,16 @@ keymap.set("n", "<leader>j", "<C-w><down>", { desc = "Move to window below" })
 keymap.set("n", "<leader>k", "<C-w><up>", { desc = "Move to above window" })
 keymap.set("n", "<leader>l", "<C-w><right>", { desc = "Move to right window" })
 
+keymap.set("v", "<Tab>", ">", { desc = "Indent" })
+keymap.set("i", "<Tab>", "  ", { desc = "Indent" })
+keymap.set("n", "<Tab>", function()
+	if vim.api.nvim_get_current_line():match("^%s*$") then
+		vim.api.nvim_put({ "  " }, "c", false, true)
+	else
+		vim.cmd("normal! >>")
+	end
+end, { noremap = true, silent = true })
+
 keymap.set("n", "<leader>t", ":ToggleTerm<CR>", { desc = "Toggle terminal" })
 
 function _G.set_terminal_keymaps()
