@@ -37,9 +37,9 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 -- ensures line number colors are correct even after switching theme
 vim.api.nvim_create_autocmd("Colorscheme", {
 	callback = function()
-		vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#bbbbbb" })
+		vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#78a9ff" })
 		vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#ff9933", bold = true })
-		vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#bbbbbb" })
+		vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#ee5396" })
 	end,
 })
 
