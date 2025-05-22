@@ -1,4 +1,4 @@
-command = /usr/bin/zsh
+command = ~/.config/tmux/start.sh
 
 font-family = "Maple Mono NF"
 font-size = 10
@@ -12,9 +12,5 @@ shell-integration-features = no-cursor
 title = " "
 window-inherit-working-directory = true
 window-decoration = false
-
-keybind = ctrl+t=new_tab
-keybind = alt+v=new_split:right
-keybind = alt+h=new_split:down
 
 background = #232136
