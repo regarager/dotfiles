@@ -11,6 +11,7 @@ return {
 				defaults = {
 					file_ignore_patterns = {
 						"node_modules",
+            ".git"
 					},
 					results_title = false,
 					sorting_strategy = "ascending",
@@ -32,7 +33,7 @@ return {
 					},
 				},
 				pickers = {
-					find_files = { follow = true },
+					find_files = { follow = true, hidden = true},
 				},
 
 				extensions = {
