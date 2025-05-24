@@ -6,7 +6,7 @@ yay -S --noconfirm --needed \
   zsh stow ghostty neovim zen-browser-bin \
   eza bat fastfetch fzf unzip ripgrep grep git-delta zoxide thefuck less net-tools tree-sitter tree-sitter-cli \
   zsh-syntax-highlighting github-cli battop btop cpupower \
-  jenv jdk8-openjdk jdk11-openjdk jdk17-openjdk jdk-openjdk npm nodejs rust go astyle \
+  jenv jdk8-openjdk jdk11-openjdk jdk17-openjdk jdk-openjdk npm nodejs rust go astyle luarocks \
   hyprland hypridle hyprpaper grimblast hyprlock mako ly waybar \
   brightnessctl xdg-desktop-portal-gtk xdg-desktop-portal-hyprland \
   wofi breeze breeze-gtk qt6ct qt5ct polkit-gnome xorg-xhost iwgtk iwd networkmanager network-manager-applet \
