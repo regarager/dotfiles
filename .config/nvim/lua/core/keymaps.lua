@@ -11,6 +11,11 @@ keymap.set("n", "<leader>j", "<C-w><down>", { desc = "Move to window below" })
 keymap.set("n", "<leader>k", "<C-w><up>", { desc = "Move to above window" })
 keymap.set("n", "<leader>l", "<C-w><right>", { desc = "Move to right window" })
 
+keymap.set("v", "J", ":m '>+1<CR>gv=gv", { silent = true })
+keymap.set("v", "K", ":m '<-2<CR>gv=gv", { silent = true })
+
+keymap.set("n", "J", "mzJ`z")
+
 keymap.set("v", "<Tab>", ">", { desc = "Indent" })
 keymap.set("i", "<Tab>", "  ", { desc = "Indent" })
 keymap.set("n", "<Tab>", function()

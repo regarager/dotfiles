@@ -29,6 +29,9 @@ opt.splitbelow = true
 
 opt.pumheight = 20
 
+opt.hlsearch = false
+opt.incsearch = true
+
 vim.api.nvim_create_autocmd("BufReadPost", {
 	pattern = { "*.stpl", "*.ejs" },
 	command = "set filetype=html",
