@@ -22,5 +22,12 @@ return {
 				exportPdf = "onSave",
 			},
 		})
+
+		vim.api.nvim_create_autocmd("FileType", {
+			pattern = "javascriptreact,typescriptreact",
+			callback = function()
+				vim.b.disable_react_tag_warning = true
+			end,
+		})
 	end,
 }

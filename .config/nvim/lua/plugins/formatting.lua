@@ -4,16 +4,16 @@ return {
 	config = function()
 		require("conform").setup({
 			formatters_by_ft = {
-				javascript = { "prettier" },
-				typescript = { "prettier" },
-				javascriptreact = { "prettier" },
-				typescriptreact = { "prettier" },
-				svelte = { "prettier" },
-				css = { "prettier" },
-				html = { "prettier" },
-				ejs = { "prettier" },
-				json = { "prettier" },
-				yaml = { "prettier" },
+				javascript = { "prettierd" },
+				typescript = { "prettierd" },
+				javascriptreact = { "prettierd" },
+				typescriptreact = { "prettierd" },
+				svelte = { "prettierd" },
+				css = { "prettierd" },
+				html = { "prettierd" },
+				ejs = { "prettierd" },
+				json = { "prettierd" },
+				yaml = { "prettierd" },
 				lua = { "stylua" },
 				python = { "black", "isort" },
 				cpp = { "astyle" },
@@ -23,7 +23,7 @@ return {
 			},
 			format_on_save = {
 				lsp_fallback = true,
-				timeout_ms = 500,
+				timeout_ms = 2000,
 			},
 		})
 

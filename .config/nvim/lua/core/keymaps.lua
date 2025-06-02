@@ -26,6 +26,12 @@ keymap.set("n", "<Tab>", function()
 	end
 end, { noremap = true, silent = true })
 
+keymap.set(
+	"n",
+	"<leader>F",
+	":lua vim.lsp.buf.format()<CR>",
+	{ desc = "Format document", silent = true, noremap = true }
+)
 keymap.set("n", "<leader>t", ":ToggleTerm<CR>", { desc = "Toggle terminal" })
 
 function _G.set_terminal_keymaps()

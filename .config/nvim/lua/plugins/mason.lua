@@ -46,7 +46,7 @@ return {
 		})
 
 		mason_tool_installer.setup({
-			"prettier",
+			"prettierd",
 			"stylua",
 			"isort",
 			"black",
