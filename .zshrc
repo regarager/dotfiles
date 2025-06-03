@@ -42,6 +42,9 @@ export HYPRSHOT_DIR="$HOME/Pictures/Screenshots"
 export BAT_THEME="OneHalfDark"
 export MANPAGER='nvim +Man!'
 
+export VISUAL=nvim
+export EDITOR="$VISUAL"
+
 alias ls="eza"
 alias la="eza -a"
 alias ll="eza --long --icons"
