@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+pactl set-source-mute 0 toggle
+
+status=$(pactl get-source-mute 0 | grep -oP 'Mute:\s*\K(yes|no)')
+
+if [ "$status" == "yes" ]; then
+  notify-send "Muted microphone"
+else
+  notify-send "Unmuted microphone"
+fi
