@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+openrgb --profile default 2>/dev/null &
