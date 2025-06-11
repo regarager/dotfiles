@@ -53,6 +53,7 @@ alias cd="z"
 alias cdi="zi"
 alias cat="bat -pp" # plain style (only code) and disables less paging
 alias mkdir="mkdir -p"
+alias e="nvim"
 
 export GOPATH=$HOME/go
 
