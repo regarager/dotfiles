@@ -1,0 +1,129 @@
+configuration {
+  modes: [ window, drun, run ];
+}
+
+* {
+  selected-normal-foreground:  rgb(249, 249, 249);
+  foreground:                  rgb(196, 203, 212);
+  normal-foreground:           @foreground;
+  alternate-normal-background: rgb(64, 69, 82, 59%);
+  red:                         rgb(220, 50, 47, 100%);
+  selected-urgent-foreground:  rgb(249, 249, 249, 100%);
+  blue:                        rgb(38, 139, 210, 100%);
+  urgent-foreground:           rgb(204, 102, 102, 100%);
+  alternate-urgent-background: rgb(75, 81, 96, 90%);
+  active-foreground:           rgb(101, 172, 255, 100%);
+  lightbg:                     rgb(238, 232, 213, 100%);
+  selected-active-foreground:  rgb(249, 249, 249, 100%);
+  alternate-active-background: rgb(75, 81, 96, 89%);
+  background:                  rgb(45, 48, 59, 95%);
+  alternate-normal-foreground: @foreground;
+  normal-background:           @background;
+  lightfg:                     rgb(88, 104, 117, 100%);
+  selected-normal-background:  rgb(64, 132, 214, 100%);
+  border-color:                rgb(124, 131, 137, 100%);
+  spacing:                     2;
+  separatorcolor:              rgb(29, 31, 33, 100%);
+  urgent-background:           rgb(29, 31, 33, 17%);
+  selected-urgent-background:  rgb(165, 66, 66, 100%);
+  alternate-urgent-foreground: @urgent-foreground;
+  background-color:            rgb(0, 0, 0, 0%);
+  alternate-active-foreground: @active-foreground;
+  active-background:           rgb(29, 31, 33, 17%);
+  selected-active-background:  rgb(68, 145, 237, 100%);
+}
+
+
+entry {
+  placeholder: "Search";
+}
+
+entry, element-text {
+  text-color: white;
+}
+
+element {
+  orientation: horizontal;
+  children: [ element-icon, element-text ];
+  spacing: 8px;
+}
+
+element-icon {
+  size: 2em;
+}
+
+element-text {
+  vertical-align: 0.5;
+}
+
+element-icon, element-text {
+  background-color: inherit;
+  text-color: inherit;
+  foreground-color: inherit;
+}
+
+window {
+  border-radius: 1em;
+  background-color: rgba(24, 24, 24, 0.6);
+  width: var(width, 40%);
+  height: var(height, 50%);
+  padding: 16px;
+  transparency: "real";
+}
+
+
+inputbar {
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: @normal-foreground;
+}
+
+element.normal.normal {
+  background-color: @normal-background;
+  text-color:       @normal-foreground;
+}
+
+element.normal.urgent {
+  background-color: @urgent-background;
+  text-color:       @urgent-foreground;
+}
+
+element.normal.active {
+  background-color: @active-background;
+  text-color:       @active-foreground;
+}
+
+element.selected.normal {
+  background-color: @selected-normal-background;
+  text-color:       @selected-normal-foreground;
+}
+
+element.selected.urgent {
+  background-color: @selected-urgent-background;
+  text-color:       @selected-urgent-foreground;
+}
+
+element.selected.active {
+  background-color: @selected-active-background;
+  text-color:       @selected-active-foreground;
+}
+
+element.alternate.normal {
+  background-color: @alternate-normal-background;
+  text-color:       @alternate-normal-foreground;
+}
+
+element.alternate.urgent {
+  background-color: @alternate-urgent-background;
+  text-color:       @alternate-urgent-foreground;
+}
+
+element.alternate.active {
+  background-color: @alternate-active-background;
+  text-color:       @alternate-active-foreground;
+}
+

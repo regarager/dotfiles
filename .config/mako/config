@@ -1,7 +1,6 @@
 default-timeout=3000
-
-border-radius=12
-border-size=0
-
-padding=12
-background-color=#1818257f
+border-radius=4
+border-color=#ffffff60
+padding=16
+background-color=#1818187f
+font=Maple Mono NF 11
