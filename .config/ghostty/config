@@ -2,6 +2,7 @@ command = ~/.config/tmux/start.sh
 
 font-family = "Maple Mono NF"
 font-size = 10
+font-feature = -calt
 
 theme = duskfox
 
