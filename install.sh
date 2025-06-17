@@ -30,6 +30,7 @@ git config --global interactive.diffFilter 'delta --color-only'
 git config --global delta.navigate true
 git config --global delta.theme OneHalfDark
 git config --global merge.conflictStyle zdiff3
+git config --global init.defaultBranch master # not git-delta but whatever
 echo "Finished setting up git-delta options"
 
 echo "Run 'nvim' to get start automatic setup for Neovim"
