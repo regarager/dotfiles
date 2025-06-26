@@ -14,4 +14,12 @@ return {
 		ft = "typst",
 		lazy = false,
 	},
+	{
+		dir = "~/Projects/cheesepizza.nvim/",
+		name = "cheesepizza",
+		config = function()
+			require("cheesepizza").setup({})
+		end,
+	},
+	{ "wakatime/vim-wakatime", lazy = false },
 }

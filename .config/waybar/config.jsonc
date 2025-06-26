@@ -11,6 +11,7 @@
     "hyprland/language",
     "pulseaudio",
     "battery",
+    "custom/mouse-battery",
     "cpu",
     "memory"
   ],
@@ -81,5 +82,10 @@
   },
   "hyprland/language": {
     "format": "{shortDescription}"
+  },
+  "custom/mouse-battery": {
+    "format": " {}",
+    "exec": "mxw report battery",
+    "interval": 5
   }
 }
