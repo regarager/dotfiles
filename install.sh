@@ -3,13 +3,13 @@ git clone https://aur.archlinux.org/yay.git
 cd yay && makepkg -si && cd ..
 
 yay -S --noconfirm --needed \
-  zsh stow ghostty neovim zen-browser-bin \
+  zsh stow ghostty neovim zen-browser-bin nautilus \
   eza bat fastfetch fzf unzip ripgrep grep git-delta zoxide thefuck less net-tools tree-sitter tree-sitter-cli \
   zsh-syntax-highlighting github-cli battop btop cpupower \
-  jenv jdk8-openjdk jdk11-openjdk jdk17-openjdk jdk-openjdk npm nodejs rust go astyle luarocks stylua tinymist typst \
+  jenv jdk8-openjdk jdk11-openjdk jdk17-openjdk jdk-openjdk npm nodejs rust go astyle lua luarocks stylua tinymist typst tmux \
   hyprland hypridle hyprpaper hyprsunset grimblast hyprlock mako ly waybar \
   brightnessctl xdg-desktop-portal-gtk xdg-desktop-portal-hyprland \
-  rofi breeze breeze-gtk qt6ct qt5ct polkit-gnome xorg-xhost iwgtk iwd networkmanager network-manager-applet \
+  rofi breeze breeze-gtk qt6ct qt5ct polkit-gnome xorg-xhost networkmanager network-manager-applet \
   bluez bluez-utils overskride \
   ttf-roboto-mono-nerd otf-comicshanns-nerd maplemono-nf otf-apple-sf-pro noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
   vesktop
@@ -20,9 +20,10 @@ echo "Adopting dotfiles..."
 stow --adopt .
 echo "Finished copying dotfiles"
 
-git clone https://github.com/alacritty/alacritty-theme .config/alacritty/themes
-git clone https://github.com/Aloxaf/fzf-tab ~
-git clone https://github.com/regarager/shiko-prompt ~
+git clone https://github.com/Aloxaf/fzf-tab ~/fzf-tab/
+git clone https://github.com/regarager/shiko-prompt ~/shiko-prompt/
+
+cd ~/shiko-prompt/ && go build && cd -
 
 echo "Setting up git-delta options"
 git config --global core.pager delta
@@ -41,4 +42,4 @@ echo "Enjoy\!"
 echo "=================================================="
 echo "Additional info:"
 echo "=================================================="
-echo "Zen Browser rose-pine theme: https://github.com/rose-pine/zen-browser (into profile `chrome` folder)
+echo "Zen Browser rose-pine theme: https://github.com/rose-pine/zen-browser (into profile `chrome` folder)"

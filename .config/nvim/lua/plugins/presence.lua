@@ -1,8 +1,11 @@
 return {
-	"andweeb/presence.nvim",
-	config = function()
-		require("presence").setup({
-			auto_update = true,
-		})
-	end,
+	{
+		"IogaMaster/neocord",
+		event = "VeryLazy",
+		config = function()
+			require("neocord").setup({
+				global_timer = true,
+			})
+		end,
+	},
 }
