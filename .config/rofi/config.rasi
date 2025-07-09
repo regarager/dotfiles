@@ -1,12 +1,13 @@
 configuration {
   modes: [ window, drun, run ];
+  font: "Maple Mono NF 12";
 }
 
 * {
   selected-normal-foreground:  rgb(249, 249, 249);
   foreground:                  rgb(196, 203, 212);
   normal-foreground:           @foreground;
-  alternate-normal-background: rgb(64, 69, 82, 59%);
+  alternate-normal-background: rgb(0, 0, 0, 0%);
   red:                         rgb(220, 50, 47, 100%);
   selected-urgent-foreground:  rgb(249, 249, 249, 100%);
   blue:                        rgb(38, 139, 210, 100%);
@@ -15,12 +16,12 @@ configuration {
   active-foreground:           rgb(101, 172, 255, 100%);
   lightbg:                     rgb(238, 232, 213, 100%);
   selected-active-foreground:  rgb(249, 249, 249, 100%);
-  alternate-active-background: rgb(75, 81, 96, 89%);
-  background:                  rgb(45, 48, 59, 95%);
+  alternate-active-background: rgb(0, 0, 0, 0%);
+  background:                  rgb(0, 0, 0, 0%);
   alternate-normal-foreground: @foreground;
   normal-background:           @background;
   lightfg:                     rgb(88, 104, 117, 100%);
-  selected-normal-background:  rgb(64, 132, 214, 100%);
+  selected-normal-background:  rgb(64, 132, 0, 0%);
   border-color:                rgb(124, 131, 137, 100%);
   spacing:                     2;
   separatorcolor:              rgb(29, 31, 33, 100%);
@@ -75,6 +76,7 @@ window {
 inputbar {
     children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
+
 textbox-prompt-colon {
     expand:     false;
     str:        ":";
