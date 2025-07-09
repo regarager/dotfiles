@@ -1,6 +1,10 @@
-default-timeout=3000
-border-radius=4
-border-color=#ffffff60
-padding=16
 background-color=#1818187f
-font=Maple Mono NF 11
+border-color=#ffffff60
+border-radius=8
+border-size=1
+default-timeout=3000
+font=Maple Mono NF 10
+height=600
+layer=overlay
+padding=12
+width=400

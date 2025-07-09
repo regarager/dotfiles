@@ -30,17 +30,18 @@ window#waybar.hidden {
 }
 
 #workspaces button.active {
-  font-weight: bold;
+  font-weight: 900;
+  color: #33b1ff;
 }
 
 #workspaces button:hover {
-  font-weight: bold;
-  color: #3ded97;
+  font-weight: 900;
+  color: #25be6a;
 }
 
 #workspaces button.urgent {
-  font-weight: bold;
-  color: #f38ba8;
+  font-weight: 900;
+  color: #ee5396;
 }
 
 #cpu,
