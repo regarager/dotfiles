@@ -3,7 +3,7 @@ git clone https://aur.archlinux.org/yay.git
 cd yay && makepkg -si && cd ..
 
 yay -S --noconfirm --needed \
-  zsh stow ghostty neovim zen-browser-bin nautilus \
+  zsh stow ghostty neovim zen-browser-bin nautilus keyd \
   eza bat fastfetch fzf unzip ripgrep grep git-delta zoxide thefuck less net-tools tree-sitter tree-sitter-cli \
   zsh-syntax-highlighting github-cli battop btop cpupower \
   jenv jdk8-openjdk jdk11-openjdk jdk17-openjdk jdk-openjdk npm nodejs rust go astyle lua luarocks stylua tinymist typst tmux \
@@ -32,6 +32,11 @@ git config --global delta.navigate true
 git config --global delta.theme OneHalfDark
 git config --global merge.conflictStyle zdiff3
 git config --global init.defaultBranch master # not git-delta but whatever
+
+echo "Setting up keyd (input remapping)"
+systemctl enable --now keyd
+sudo cp keyd.conf /etc/keyd/default.conf
+
 echo "Finished setting up git-delta options"
 
 echo "Run 'nvim' to get start automatic setup for Neovim"
