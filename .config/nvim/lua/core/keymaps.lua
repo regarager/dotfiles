@@ -20,7 +20,7 @@ keymap.set("v", "<Tab>", ">", { desc = "Indent" })
 keymap.set("i", "<Tab>", "  ", { desc = "Indent" })
 keymap.set("n", "<Tab>", function()
 	if vim.api.nvim_get_current_line():match("^%s*$") then
-		vim.api.nvim_put({ "  " }, "c", false, true)
+		vim.api.nvim_put({ "\t" }, "c", false, true)
 	else
 		vim.cmd("normal! >>")
 	end
