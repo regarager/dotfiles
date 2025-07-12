@@ -1,0 +1,12 @@
+[Unit]
+Description=Set laptop charge limit
+After=getty.target
+
+[Service]
+Type=oneshot
+ExecStart=bash -c "echo 80 > /sys/class/power_supply/BAT*/charge_control_end_threshold"
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target

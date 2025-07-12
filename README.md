@@ -10,21 +10,13 @@ $ git clone <repo url>
 $ cd dotfiles
 ```
 
-Install `yay` (an AUR helper) with `sudo pacman -S yay`.
-
 Then, run the install script `install.sh` **without sudo**.
-
-For Java setup (with `jenv`), run `java_setup.sh`.
 
 ## Additional
 
-### Networking
-Copy the following into `/etc/NetworkManager/NetworkManager.conf`:
+There are several useful files in the `etc` folder (of this repo) that can be placed into subfolders of `/etc`.
 
-```
-[connectivity]
-enabled=false
-
-[device]
-wifi.backend=iwd
-```
+- `charge-limit.service` - sets the laptop charge limit to 80% (can be changed) at boot
+  - Location: `/etc/systemd/system/charge-limit.service`
+- `keyd.conf` - keybindings for `keyd`
+  - Location: `/etc/keyd/default.conf`
