@@ -47,18 +47,12 @@
     "format-charging": " {capacity}%",
     "format-plugged": " {capacity}%",
     "format-alt": "{time} {icon}",
-    "format-warning": "󰂃 {capacity}%",
     "format-icons": [
-      "󰂎",
-      "󰁺",
-      "󰁻",
-      "󰁼",
+      "󰂃",
       "󰁽",
-      "󰁾",
       "󰁿",
-      "󰂀",
       "󰂁",
-      "󰂂"
+      "󰁹"
     ],
     "full-at": 80,
     "interval": 5
