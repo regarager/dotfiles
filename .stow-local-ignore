@@ -25,4 +25,4 @@ _darcs
 ^/COPYING
 
 install.sh
-java_setup.sh
+install-cyber.sh

@@ -7,11 +7,14 @@ yay -S --noconfirm --needed \
   zsh stow ghostty neovim \ # necessary
   zen-browser-bin nautilus vesktop gthumb \ # important programs
   bat battop btop cpupower eza fastfetch fzf git-delta github-cli grep imagemagick less net-tools ripgrep thefuck tmux tree-sitter tree-sitter-cli unzip zoxide zsh-syntax-highlighting \ # terminal tools
-  jenv jdk8-openjdk jdk11-openjdk jdk17-openjdk jdk-openjdk npm nodejs rust go astyle lua luarocks stylua tinymist typst uv \ # programming stuff
+  jenv jdk8-openjdk jdk11-openjdk jdk17-openjdk jdk-openjdk npm nodejs rust-analyzer rustup go astyle lua luarocks stylua tinymist typst uv \ # programming stuff
   hyprland hypridle hyprpaper hyprsunset grimblast hyprlock mako ly waybar keyd brightnessctl xdg-desktop-portal-gtk xdg-desktop-portal-hyprland rofi wl-clipboard \ # hyprland + other important stuff
   breeze breeze-gtk qt6ct qt5ct polkit-gnome xorg-xhost networkmanager network-manager-applet systemd-resolvconf \ # network + random important things
   bluez bluez-utils overskride \ # bluetooth
   ttf-roboto-mono-nerd otf-comicshanns-nerd maplemono-nf otf-apple-sf-pro noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra # fonts
+
+echo "Rust setup"
+rustup default stable
 
 echo "Installing pokeget (for fetch)"
 cargo install pokeget

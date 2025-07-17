@@ -19,6 +19,7 @@ return {
 				cpp = { "clang-format" },
 				c = { "clang-format" },
 				java = { "astyle" },
+				rust = { "rustfmt" },
 				["*"] = { "trim_whitespace" },
 			},
 			format_on_save = {
@@ -40,8 +41,8 @@ return {
 				"--pad-oper",
 				"--style=google",
 				"--unpad-paren",
-        "--close-templates",
-        "--squeeze-ws",
+				"--close-templates",
+				"--squeeze-ws",
 			},
 		}
 	end,

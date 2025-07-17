@@ -40,19 +40,12 @@
     "tooltip": false
   },
   "battery": {
-    "states": {
-      "warning": 20
-    },
     "format": "{icon} {capacity}%",
     "format-charging": " {capacity}%",
     "format-plugged": " {capacity}%",
     "format-alt": "{time} {icon}",
     "format-icons": [
-      "󰂃",
-      "󰁽",
-      "󰁿",
-      "󰂁",
-      "󰁹"
+      "󰂎", "󱊡", "󱊢", "󱊣"
     ],
     "full-at": 80,
     "interval": 5
