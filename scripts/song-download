@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+echo -n "Enter query: "
+choice=$(read query; yt-dlp ytsearch20:"$query" --print "%(title)s [%(id)s]" --flat-playlist | /bin/cat -n | fzf --no-sort --reverse | awk '{print $NF}' | tr -d "[]")
+yt-dlp --extract-audio --embed-metadata --merge-output-format mkv "https://youtube.com/watch?v=$choice" -o "%(title)s"

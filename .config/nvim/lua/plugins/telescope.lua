@@ -59,7 +59,6 @@ return {
 			vim.keymap.set("n", "fd", builtin.git_status, {})
 			vim.keymap.set("n", "fb", builtin.buffers, {})
 			vim.keymap.set("n", "fc", builtin.current_buffer_fuzzy_find, {})
-			vim.keymap.set("n", "fs", builtin.lsp_workspace_symbols, {})
 			vim.keymap.set(
 				"n",
 				"fth",

@@ -45,7 +45,7 @@
     "format-plugged": " {capacity}%",
     "format-alt": "{time} {icon}",
     "format-icons": [
-      "󰂎", "󱊡", "󱊢", "󱊣"
+      "󱊡", "󱊢", "󱊣"
     ],
     "full-at": 80,
     "interval": 5
