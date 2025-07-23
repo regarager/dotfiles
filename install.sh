@@ -6,6 +6,7 @@ echo "Installing programs"
 yay -S --noconfirm --needed \
   zsh stow ghostty neovim \ # necessary
   zen-browser-bin nautilus vesktop gthumb \ # important programs
+  mpd rmpc cava \ # music stuff
   bat battop btop cpupower eza fastfetch fzf git-delta github-cli grep imagemagick less net-tools ripgrep thefuck tmux tree-sitter tree-sitter-cli unzip zoxide zsh-syntax-highlighting \ # terminal tools
   python-black python-isort python-numpy python-pillow miniconda3 conda-zsh-completion
   jenv jdk8-openjdk jdk11-openjdk jdk17-openjdk jdk-openjdk npm nodejs prettierd quarto-cli-bin rust-analyzer rustup go astyle lua lua51 luarocks stylua tinymist typst uv \ # programming stuff
