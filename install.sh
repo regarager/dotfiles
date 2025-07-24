@@ -9,7 +9,7 @@ yay -S --noconfirm --needed \
   mpd rmpc cava \ # music stuff
   bat battop btop cpupower eza fastfetch fzf git-delta github-cli grep imagemagick less net-tools ripgrep thefuck tmux tree-sitter tree-sitter-cli unzip zoxide zsh-syntax-highlighting \ # terminal tools
   python-black python-isort python-numpy python-pillow miniconda3 conda-zsh-completion
-  jenv jdk8-openjdk jdk11-openjdk jdk17-openjdk jdk-openjdk npm nodejs prettierd quarto-cli-bin rust-analyzer rustup go astyle lua lua51 luarocks stylua tinymist typst uv \ # programming stuff
+  jenv jdk8-openjdk jdk11-openjdk jdk17-openjdk jdk-openjdk npm nodejs prettierd quarto-cli-bin rust-analyzer rustup go astyle lua lua51 luarocks stylua tinymist typst typstyle uv \ # programming stuff
   hyprland hypridle hyprpaper hyprsunset grimblast hyprlock mako ly waybar keyd brightnessctl xdg-desktop-portal-gtk xdg-desktop-portal-hyprland rofi wl-clipboard \ # hyprland + other important stuff
   breeze breeze-gtk qt6ct qt5ct polkit-gnome xorg-xhost networkmanager network-manager-applet systemd-resolvconf \ # network + random important things
   bluez bluez-utils overskride \ # bluetooth
