@@ -14,6 +14,7 @@ yay -S --noconfirm --needed \
   breeze breeze-gtk qt6ct qt5ct polkit-gnome xorg-xhost networkmanager network-manager-applet systemd-resolvconf \ # network + random important things
   bluez bluez-utils overskride \ # bluetooth
   ttf-roboto-mono-nerd otf-comicshanns-nerd maplemono-nf otf-apple-sf-pro noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra # fonts
+  rose-pine-gtk-theme-full \ # gtk theme
 
 echo "Rust setup"
 rustup default stable
@@ -60,3 +61,4 @@ echo "=================================================="
 echo "Additional info:"
 echo "=================================================="
 echo "Zen Browser rose-pine theme: https://github.com/rose-pine/zen-browser (into profile `chrome` folder)"
+echo "Zen Browser dropdown select text color fix: https://gist.github.com/regarager/ec361ae97d7641a1da6a092d7155399e"
