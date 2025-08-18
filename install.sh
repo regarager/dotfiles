@@ -29,14 +29,12 @@ echo "Setting up jenv"
 jenv add /usr/lib/jvm/*-openjdk
 jenv enable-plugin export
 
-echo "Setting up fzf-tab and shiko-prompt"
+echo "Setting up fzf-tab"
 git clone https://github.com/Aloxaf/fzf-tab ~/fzf-tab/
-git clone https://github.com/regarager/shiko-prompt ~/shiko-prompt/
 
 echo "Setting up shiko-prompt"
-cd ~/shiko-prompt/
-SHIKO_THEME=./themes/duskfox.ron cargo build --release
-cd
+git clone https://github.com/regarager/shiko-prompt ~/shiko-prompt/
+cd ~/shiko-prompt/ && SHIKO_THEME=./themes/duskfox.ron cargo build --release && cd ~
 
 echo "Setting up git-delta options"
 git config --global core.pager delta
