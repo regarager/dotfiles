@@ -2,6 +2,7 @@ return {
 	"fatih/vim-go",
 	{
 		"OXY2DEV/markview.nvim",
+		enable = false,
 		lazy = false,
 		priority = 49,
 		opts = {

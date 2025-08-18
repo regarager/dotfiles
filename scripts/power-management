@@ -1,5 +1,3 @@
 #!/usr/bin/env bash
 
-commands=$(ls ~/scripts/power | sed 's/^\(.\)/\U\1/')
-selection=$(printf "%s\n" "$commands" | ~/scripts/rofi.sh -dmenu | tr '[:upper:]' '[:lower:]')
-$(~/scripts/power/$selection)
+rofi -show p -modi p:rofi-power-menu

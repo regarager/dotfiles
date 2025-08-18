@@ -4,6 +4,9 @@ font-family = "Maple Mono NF"
 font-size = 10
 font-feature = -calt
 
+window-padding-x = 4
+window-padding-y = 4
+
 theme = duskfox
 
 cursor-style = block

@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-openrgb --profile off 2>/dev/null &
-systemctl hibernate

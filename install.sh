@@ -10,11 +10,11 @@ yay -S --noconfirm --needed \
   bat battop btop cpupower eza fastfetch fzf git-delta github-cli grep imagemagick less net-tools ripgrep thefuck tmux tree-sitter tree-sitter-cli unzip zoxide zsh-syntax-highlighting \ # terminal tools
   python-black python-isort python-numpy python-pillow miniconda3 conda-zsh-completion
   jenv jdk8-openjdk jdk11-openjdk jdk17-openjdk jdk-openjdk npm nodejs prettierd quarto-cli-bin rust-analyzer rustup go astyle lua lua51 luarocks stylua tinymist typst typstyle uv \ # programming stuff
-  hyprland hypridle hyprpaper hyprsunset grimblast hyprlock mako ly waybar keyd brightnessctl xdg-desktop-portal-gtk xdg-desktop-portal-hyprland rofi wl-clipboard \ # hyprland + other important stuff
+  hyprland hypridle hyprpaper hyprpicker grimblast hyprlock mako ly waybar keyd brightnessctl xdg-desktop-portal-gtk xdg-desktop-portal-hyprland rofi wl-clipboard \ # hyprland + other important stuff
   breeze breeze-gtk qt6ct qt5ct polkit-gnome xorg-xhost networkmanager network-manager-applet systemd-resolvconf \ # network + random important things
   bluez bluez-utils overskride \ # bluetooth
   ttf-roboto-mono-nerd otf-comicshanns-nerd maplemono-nf otf-apple-sf-pro noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra # fonts
-  rose-pine-gtk-theme-full \ # gtk theme
+  rose-pine-gtk-theme-full nwg-look \ # gtk theme
 
 echo "Rust setup"
 rustup default stable
@@ -27,12 +27,16 @@ stow --adopt . echo "Finished copying dotfiles"
 
 echo "Setting up jenv"
 jenv add /usr/lib/jvm/*-openjdk
+jenv enable-plugin export
 
 echo "Setting up fzf-tab and shiko-prompt"
 git clone https://github.com/Aloxaf/fzf-tab ~/fzf-tab/
 git clone https://github.com/regarager/shiko-prompt ~/shiko-prompt/
 
-cd ~/shiko-prompt/ && go build && cd -
+echo "Setting up shiko-prompt"
+cd ~/shiko-prompt/
+SHIKO_THEME=./themes/duskfox.ron cargo build --release
+cd
 
 echo "Setting up git-delta options"
 git config --global core.pager delta
@@ -46,12 +50,6 @@ git config --global init.defaultBranch master # not git-delta but whatever
 echo "Setting up keyd (input remapping)"
 systemctl enable --now keyd
 sudo cp keyd.conf /etc/keyd/default.conf
-
-echo "Setting up Blackarch repos"
-curl -O https://blackarch.org/strap.sh
-chmod +x ./strap.sh
-./strap.sh
-rm ./strap.sh
 
 echo "Finished setting up git-delta options"
 
