@@ -10,6 +10,7 @@
     "tray",
     "hyprland/language",
     "pulseaudio",
+    "temperature",
     "battery",
     "custom/mouse-battery",
     "cpu",
@@ -36,7 +37,7 @@
     "format": " {temperatureC}°C",
     "format-critical": " {temperatureC}°C",
     "critical-threshold": 80,
-    "interval": 5,
+    "interval": 2,
     "tooltip": false
   },
   "battery": {

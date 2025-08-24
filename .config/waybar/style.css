@@ -44,16 +44,17 @@ window#waybar.hidden {
   color: #ee5396;
 }
 
-#cpu,
-#memory,
-#custom-power,
-#battery,
 #backlight,
-#pulseaudio,
-#network,
+#battery,
 #clock,
-#tray,
+#cpu,
+#custom-power,
 #language,
+#memory,
+#network,
+#pulseaudio,
+#temperature,
+#tray,
 #custom-mouse-battery {
   margin: 6px 0px;
   padding: 0px 12px;
