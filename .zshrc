@@ -4,7 +4,7 @@ source ~/shiko-prompt/shiko.zsh
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-bindkey -e
+bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '$HOME/.zshrc'
@@ -76,4 +76,3 @@ eval $(thefuck --alias)
 
 # To customize prompt, run `p10k configure` or edit ~/dotfiles/.p10k.zsh.
 # [[ ! -f ~/dotfiles/.p10k.zsh ]] || source ~/dotfiles/.p10k.zsh
-
