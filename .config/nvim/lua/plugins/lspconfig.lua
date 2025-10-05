@@ -5,8 +5,6 @@ return {
 		"hrsh7th/cmp-nvim-lsp",
 	},
 	config = function()
-		local lspconfig = require("lspconfig")
-
 		require("mason-lspconfig").setup()
 
 		vim.api.nvim_create_autocmd("LspAttach", {
@@ -16,7 +14,7 @@ return {
 			end,
 		})
 
-		lspconfig["tinymist"].setup({
+		vim.lsp.config("tinymist", {
 			settings = {
 				formatterMode = "typstyle",
 				exportPdf = "onSave",

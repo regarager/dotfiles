@@ -49,6 +49,9 @@ alias mkdir="mkdir -p"
 alias v="nvim"
 alias untar="tar -xvf"
 alias untgz="tar -xzvf"
+alias vzsh="nvim ~/.zshrc"
+alias szsh="source ~/.zshrc"
+alias senv="source .venv/bin/activate"
 
 bak ()
 {
