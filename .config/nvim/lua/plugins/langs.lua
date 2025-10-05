@@ -21,6 +21,13 @@ return {
 		name = "cheesepizza",
 		config = function()
 			require("cheesepizza").setup({})
+
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = { "python", "java", "cpp" },
+				callback = function()
+					vim.keymap.set("n", "<leader>r", ":RunTerm<CR>")
+				end,
+			})
 		end,
 	},
 	{ "wakatime/vim-wakatime", lazy = false },
