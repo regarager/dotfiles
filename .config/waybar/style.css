@@ -4,10 +4,11 @@
   min-height: 0;
   font-family: "Maple Mono NF";
   font-size: 14px;
+  color: #dcd7ba;
 }
 
 window#waybar {
-  background-color: transparent;
+  background-color: #1F1F28;
   transition-property: background-color;
   transition-duration: 0.5s;
 }
@@ -17,7 +18,7 @@ window#waybar.hidden {
 }
 
 #workspaces {
-  margin-left: 4px;
+  margin-left: 8px;
   background-color: transparent;
 }
 
@@ -25,14 +26,12 @@ window#waybar.hidden {
   all: initial;
   min-width: 0;
   padding: 0px 14px;
-  margin: 0px 3px;
-  color: #ffffff;
   border-top: 2px solid transparent;
   border-bottom: 2px solid transparent;
 }
 
 #workspaces button.active {
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 2px solid #dcd7ba;
 }
 
 #workspaces button:hover {
@@ -56,9 +55,8 @@ window#waybar.hidden {
 #temperature,
 #tray,
 #custom-mouse-battery {
-  margin: 6px 0px;
+  margin: 8px 0px;
   padding: 0px 12px;
-  color: #ffffff;
 }
 
 #battery.charging,
@@ -70,7 +68,6 @@ window#waybar.hidden {
 tooltip {
   border-radius: 8px;
   padding: 15px;
-  background-color: rgba(24, 24, 37, 0.7);
 }
 
 tooltip label {
@@ -80,7 +77,6 @@ tooltip label {
 .modules-left,
 .modules-center,
 .modules-right {
-  background-color: rgba(24, 24, 37, 0.5);
-  border-radius: 8px;
-  margin: 4px 12px;
+  background-color: transparent;
+  margin: 0;
 }

@@ -8,6 +8,7 @@
   ],
   "modules-right": [
     "tray",
+    "network",
     "hyprland/language",
     "pulseaudio",
     "temperature",
@@ -29,8 +30,7 @@
     }
   },
   "network": {
-    "format-wifi": "  {essid}",
-    "format-ethernet": "Ethernet",
+    "format-wifi": "  {ifname}",
     "tooltip": false
   },
   "temperature": {
