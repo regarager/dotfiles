@@ -1,24 +1,24 @@
 vim.g.mapleader = " "
 
-local keymap = vim.keymap
+local map = vim.keymap.set
 
-keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
-keymap.set("n", "<leader>sv", ":vsplit<CR>", { desc = "Split window vertically" })
-keymap.set("n", "<leader>sh", ":split<CR>", { desc = "Split window horizontally" })
-keymap.set("n", "<leader>se", "<C-w>=", { desc = "Set windows to equal size" })
-keymap.set("n", "<leader>h", "<C-w><left>", { desc = "Move to left window" })
-keymap.set("n", "<leader>j", "<C-w><down>", { desc = "Move to window below" })
-keymap.set("n", "<leader>k", "<C-w><up>", { desc = "Move to above window" })
-keymap.set("n", "<leader>l", "<C-w><right>", { desc = "Move to right window" })
+map("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
+map("n", "<leader>sv", ":vsplit<CR>", { desc = "Split window vertically" })
+map("n", "<leader>sh", ":split<CR>", { desc = "Split window horizontally" })
+map("n", "<leader>se", "<C-w>=", { desc = "Set windows to equal size" })
+map("n", "<leader>h", "<C-w><left>", { desc = "Move to left window" })
+map("n", "<leader>j", "<C-w><down>", { desc = "Move to window below" })
+map("n", "<leader>k", "<C-w><up>", { desc = "Move to above window" })
+map("n", "<leader>l", "<C-w><right>", { desc = "Move to right window" })
 
-keymap.set("v", "J", ":m '>+1<CR>gv=gv", { silent = true })
-keymap.set("v", "K", ":m '<-2<CR>gv=gv", { silent = true })
+map("v", "J", ":m '>+1<CR>gv=gv", { silent = true })
+map("v", "K", ":m '<-2<CR>gv=gv", { silent = true })
 
-keymap.set("n", "J", "mzJ`z")
+map("n", "J", "mzJ`z")
 
-keymap.set("v", "<Tab>", ">", { desc = "Indent" })
-keymap.set("i", "<Tab>", "  ", { desc = "Indent" })
-keymap.set("n", "<Tab>", function()
+map("v", "<Tab>", ">", { desc = "Indent" })
+map("i", "<Tab>", "  ", { desc = "Indent" })
+map("n", "<Tab>", function()
 	if vim.api.nvim_get_current_line():match("^%s*$") then
 		vim.api.nvim_put({ "\t" }, "c", false, true)
 	else
@@ -26,23 +26,29 @@ keymap.set("n", "<Tab>", function()
 	end
 end, { noremap = true, silent = true })
 
-keymap.set(
-	"n",
-	"<leader>F",
-	":lua vim.lsp.buf.format()<CR>",
-	{ desc = "Format document", silent = true, noremap = true }
-)
-keymap.set("n", "<leader>t", ":ToggleTerm<CR>", { desc = "Toggle terminal" })
+map("n", "<leader>F", ":lua vim.lsp.buf.format()<CR>", { desc = "Format document", silent = true, noremap = true })
+map("n", "<leader>t", ":ToggleTerm<CR>", { desc = "Toggle terminal" })
 
 function _G.set_terminal_keymaps()
 	local opts = { buffer = 0 }
-	keymap.set("t", "<esc>", [[<C-\><C-n>]], opts)
-	keymap.set("t", "<C-h>", [[<Cmd>wincmd h<CR>]], opts)
-	keymap.set("t", "<C-j>", [[<Cmd>wincmd j<CR>]], opts)
-	keymap.set("t", "<C-k>", [[<Cmd>wincmd k<CR>]], opts)
-	keymap.set("t", "<C-l>", [[<Cmd>wincmd l<CR>]], opts)
-	keymap.set("t", "<C-w>", [[<C-\><C-n><C-w>]], opts)
+	map("t", "<esc>", [[<C-\><C-n>]], opts)
+	map("t", "<C-h>", [[<Cmd>wincmd h<CR>]], opts)
+	map("t", "<C-j>", [[<Cmd>wincmd j<CR>]], opts)
+	map("t", "<C-k>", [[<Cmd>wincmd k<CR>]], opts)
+	map("t", "<C-l>", [[<Cmd>wincmd l<CR>]], opts)
+	map("t", "<C-w>", [[<C-\><C-n><C-w>]], opts)
 end
 
 vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
-keymap.set("n", "\\", ":Oil<cr>", { desc = "Open oil.nvim" })
+map("n", "<leader>e", ":Oil<CR>", { desc = "Open oil.nvim", silent = true })
+map("n", "<leader>f", ":Pick files<CR>", { silent = true })
+
+local builtin = require("telescope.builtin")
+map("n", "ff", builtin.find_files, {})
+map("n", "fg", builtin.live_grep, {})
+map("n", "fd", builtin.git_status, {})
+map("n", "fb", builtin.buffers, {})
+map("n", "fc", builtin.current_buffer_fuzzy_find, {})
+
+vim.keymap.set("n", "zR", require("ufo").openAllFolds)
+vim.keymap.set("n", "zM", require("ufo").closeAllFolds)

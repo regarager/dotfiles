@@ -32,13 +32,22 @@ opt.pumheight = 20
 opt.hlsearch = false
 opt.incsearch = true
 
+opt.winborder = "rounded"
+
+opt.swapfile = false
+
+opt.foldcolumn = "0"
+opt.foldlevel = 99
+opt.foldlevelstart = 99
+opt.foldenable = true
+
 vim.api.nvim_create_autocmd("BufReadPost", {
 	pattern = { "*.stpl", "*.ejs" },
 	command = "set filetype=html",
 })
 
 -- ensures line number colors are correct even after switching theme
-vim.api.nvim_create_autocmd("Colorscheme", {
+vim.api.nvim_create_autocmd("ColorScheme", {
 	callback = function()
 		vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#78a9ff" })
 		vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#ff9933", bold = true })
@@ -46,6 +55,17 @@ vim.api.nvim_create_autocmd("Colorscheme", {
 	end,
 })
 
-vim.diagnostic.config({ virtual_text = true })
+require("kanagawa").setup({
+	colors = {
+		theme = {
+			all = {
+				ui = {
+					bg_gutter = "none",
+					bg = "none",
+				},
+			},
+		},
+	},
+})
 
-vim.cmd("colorscheme duskfox")
+vim.cmd("colorscheme kanagawa-wave")
