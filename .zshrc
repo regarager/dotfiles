@@ -52,6 +52,7 @@ alias untgz="tar -xzvf"
 alias vzsh="nvim ~/.zshrc"
 alias szsh="source ~/.zshrc"
 alias senv="source .venv/bin/activate"
+alias open="xdg-open"
 
 bak ()
 {
@@ -79,3 +80,11 @@ eval $(thefuck --alias)
 
 # To customize prompt, run `p10k configure` or edit ~/dotfiles/.p10k.zsh.
 # [[ ! -f ~/dotfiles/.p10k.zsh ]] || source ~/dotfiles/.p10k.zsh
+
+export ANDROID_HOME=~/Android
+export ANDROID_SDK_ROOT=$ANDROID_HOME/Sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+export PATH=$PATH:$ANDROID_SDK_ROOT/tools
+export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin

@@ -48,7 +48,6 @@
     "format-icons": [
       "󱊡", "󱊢", "󱊣"
     ],
-    "full-at": 80,
     "interval": 5
   },
   "tray": {
@@ -75,6 +74,7 @@
   "custom/mouse-battery": {
     "format": " {}",
     "exec": "mxw report battery",
+    "tooltip": false,
     "interval": 5
   }
 }
