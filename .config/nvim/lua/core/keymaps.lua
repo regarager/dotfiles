@@ -29,6 +29,21 @@ end, { noremap = true, silent = true })
 map("n", "<leader>F", ":lua vim.lsp.buf.format()<CR>", { desc = "Format document", silent = true, noremap = true })
 map("n", "<leader>t", ":ToggleTerm<CR>", { desc = "Toggle terminal" })
 
+map("n", "<leader>e", ":Oil<CR>", { desc = "Open oil.nvim", silent = true })
+map("n", "<leader>f", ":Pick files<CR>", { silent = true })
+
+local builtin = require("telescope.builtin")
+map("n", "ff", builtin.find_files, {})
+map("n", "fg", builtin.live_grep, {})
+map("n", "fd", builtin.git_status, {})
+map("n", "fb", builtin.buffers, {})
+map("n", "fc", builtin.current_buffer_fuzzy_find, {})
+
+map("n", "zR", require("ufo").openAllFolds)
+map("n", "zM", require("ufo").closeAllFolds)
+
+map("n", "<leader>xx", ":lua require('trouble').open('diagnostics')<cr>", { silent = true })
+
 function _G.set_terminal_keymaps()
 	local opts = { buffer = 0 }
 	map("t", "<esc>", [[<C-\><C-n>]], opts)
@@ -40,15 +55,3 @@ function _G.set_terminal_keymaps()
 end
 
 vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
-map("n", "<leader>e", ":Oil<CR>", { desc = "Open oil.nvim", silent = true })
-map("n", "<leader>f", ":Pick files<CR>", { silent = true })
-
-local builtin = require("telescope.builtin")
-map("n", "ff", builtin.find_files, {})
-map("n", "fg", builtin.live_grep, {})
-map("n", "fd", builtin.git_status, {})
-map("n", "fb", builtin.buffers, {})
-map("n", "fc", builtin.current_buffer_fuzzy_find, {})
-
-vim.keymap.set("n", "zR", require("ufo").openAllFolds)
-vim.keymap.set("n", "zM", require("ufo").closeAllFolds)

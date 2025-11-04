@@ -41,11 +41,6 @@ opt.foldlevel = 99
 opt.foldlevelstart = 99
 opt.foldenable = true
 
-vim.api.nvim_create_autocmd("BufReadPost", {
-	pattern = { "*.stpl", "*.ejs" },
-	command = "set filetype=html",
-})
-
 -- ensures line number colors are correct even after switching theme
 vim.api.nvim_create_autocmd("ColorScheme", {
 	callback = function()

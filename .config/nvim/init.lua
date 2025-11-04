@@ -1,12 +1,11 @@
 -- essential files
-require("core.plugins")
+require("core.pack")
 require("core.keymaps")
 require("core.options")
 require("core.lsp")
 
 -- plugin setups
 require("plugins.cmp")
-require("plugins.errors")
 require("plugins.formatting")
 require("plugins.lazydev")
 require("plugins.mason")
@@ -30,9 +29,6 @@ require("gitsigns").setup()
 require("mini.notify")
 require("mini.pairs").setup()
 require("mini.pick").setup()
-require("neocord").setup({
-	global_timer = true,
-})
 require("nvim-highlight-colors").setup()
 require("oil").setup()
 require("toggleterm").setup()
@@ -59,15 +55,12 @@ require("Comment").setup({
 require("todo-comments").setup()
 
 require("ufo").setup({
-	provider_selector = function(bufnr, filetype, buftype)
+	provider_selector = function()
 		return { "treesitter", "indent" }
 	end,
 })
 
-require("nvim-ts-autotag").setup({})
-local TagConfigs = require("nvim-ts-autotag.config.init")
-TagConfigs:add_alias("stpl", "html")
-TagConfigs:add_alias("ejs", "html")
+require("nvim-ts-autotag").setup()
 
 require("lualine").setup({
 	options = {

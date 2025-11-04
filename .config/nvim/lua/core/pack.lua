@@ -8,6 +8,7 @@ vim.pack.add({
 	"https://github.com/folke/lazydev.nvim",
 	"https://github.com/folke/noice.nvim",
 	"https://github.com/folke/todo-comments.nvim",
+	"https://github.com/folke/trouble.nvim",
 	"https://github.com/geg2102/nvim-jupyter-client",
 	"https://github.com/geg2102/nvim-python-repl",
 	"https://github.com/hrsh7th/cmp-buffer",
@@ -56,6 +57,4 @@ vim.pack.add({
 
 	"https://github.com/EdenEast/nightfox.nvim",
 	"https://github.com/rebelot/kanagawa.nvim",
-
-	"https://github.com/IogaMaster/neocord",
 })
