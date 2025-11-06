@@ -7,7 +7,6 @@ require("core.lsp")
 -- plugin setups
 require("plugins.cmp")
 require("plugins.formatting")
-require("plugins.lazydev")
 require("plugins.mason")
 require("plugins.notebook")
 require("plugins.telescope")
