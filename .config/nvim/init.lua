@@ -9,7 +9,6 @@ require("plugins.cmp")
 require("plugins.formatting")
 require("plugins.mason")
 require("plugins.notebook")
-require("plugins.telescope")
 require("plugins.treesitter")
 
 -- misc setups
@@ -25,6 +24,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 require("gitsigns").setup()
+require("mini.extra").setup()
 require("mini.notify")
 require("mini.pairs").setup()
 require("mini.pick").setup()

@@ -41,6 +41,8 @@ opt.foldlevel = 99
 opt.foldlevelstart = 99
 opt.foldenable = true
 
+vim.g.suda_smart_edit = 1
+
 -- ensures line number colors are correct even after switching theme
 vim.api.nvim_create_autocmd("ColorScheme", {
 	callback = function()

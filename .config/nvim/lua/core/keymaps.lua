@@ -30,14 +30,12 @@ map("n", "<leader>F", ":lua vim.lsp.buf.format()<CR>", { desc = "Format document
 map("n", "<leader>t", ":ToggleTerm<CR>", { desc = "Toggle terminal" })
 
 map("n", "<leader>e", ":Oil<CR>", { desc = "Open oil.nvim", silent = true })
-map("n", "<leader>f", ":Pick files<CR>", { silent = true })
 
-local builtin = require("telescope.builtin")
-map("n", "ff", builtin.find_files, {})
-map("n", "fg", builtin.live_grep, {})
-map("n", "fd", builtin.git_status, {})
-map("n", "fb", builtin.buffers, {})
-map("n", "fc", builtin.current_buffer_fuzzy_find, {})
+map("n", "ff", ":Pick files<CR>", { silent = true })
+map("n", "fg", ":Pick grep_live<CR>", { silent = true })
+map("n", "fd", ":Pick git_hunks scope='unstaged'<CR>", { silent = true })
+map("n", "fx", ":Pick diagnostic scope='current'<CR>", { silent = true })
+map("n", "fs", ":Pick lsp scope='document_symbol'<CR>", { silent = true })
 
 map("n", "zR", require("ufo").openAllFolds)
 map("n", "zM", require("ufo").closeAllFolds)
