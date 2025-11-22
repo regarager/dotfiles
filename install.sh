@@ -14,7 +14,7 @@ yay -S --noconfirm --needed \
   breeze breeze-gtk qt6ct qt5ct polkit-gnome xorg-xhost networkmanager network-manager-applet systemd-resolvconf \
   bluez bluez-utils overskride \
   ttf-roboto-mono-nerd otf-comicshanns-nerd maplemono-nf otf-apple-sf-pro noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra  \
-  rose-pine-gtk-theme-full nwg-look \
+  arc-gtk-theme libadwaita-without-adwaita nwg-look \
 
 echo "Rust setup"
 rustup default stable

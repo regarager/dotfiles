@@ -21,15 +21,14 @@ zstyle ':vcs:info:git:*' formats '%b '
 export TERM='xterm-256color'
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 eval "$(zoxide init zsh)"
 
-export GPG_TTY=$(tty) # for gpg stuff
+export GPG_TTY=$(tty)
 
 export HYPRSHOT_DIR="$HOME/Pictures/Screenshots"
 export BAT_THEME="OneHalfDark"
@@ -59,6 +58,11 @@ bak ()
   mv "$1" "$1.bak"
 }
 
+copy()
+{
+  cat "$1" | wl-copy
+}
+
 export GOPATH=$HOME/go
 
 export PATH="/bin:/usr/bin:/usr/local/bin:/sbin:${PATH}"
@@ -75,11 +79,7 @@ source ~/fzf-tab/fzf-tab.plugin.zsh
 
 eval "$(jenv init -)"
 
-# source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 eval $(thefuck --alias)
-
-# To customize prompt, run `p10k configure` or edit ~/dotfiles/.p10k.zsh.
-# [[ ! -f ~/dotfiles/.p10k.zsh ]] || source ~/dotfiles/.p10k.zsh
 
 export ANDROID_HOME=~/Android
 export ANDROID_SDK_ROOT=$ANDROID_HOME/Sdk
