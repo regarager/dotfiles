@@ -14,6 +14,7 @@ require("plugins.treesitter")
 -- misc setups
 vim.g.suda_smart_edit = 1
 
+vim.opt.rtp:append("~/Projects/cheesepizza.nvim/")
 require("cheesepizza").setup()
 
 vim.api.nvim_create_autocmd("FileType", {
@@ -34,7 +35,7 @@ require("toggleterm").setup()
 
 vim.api.nvim_create_autocmd("BufWritePre", {
 	callback = function()
-		if vim.bo.filetype == "oil" or vim.api.nvim_buf_get_name(0) == "" then
+		if vim.bo.filetype == "oil" or vim.bo.filetype == "suda" or vim.api.nvim_buf_get_name(0) == "" then
 			return
 		end
 

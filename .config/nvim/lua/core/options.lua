@@ -41,14 +41,16 @@ opt.foldlevel = 99
 opt.foldlevelstart = 99
 opt.foldenable = true
 
+opt.fillchars:append({ eob = " " })
+
 vim.g.suda_smart_edit = 1
 
 -- ensures line number colors are correct even after switching theme
 vim.api.nvim_create_autocmd("ColorScheme", {
 	callback = function()
-		vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#78a9ff" })
-		vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#ff9933", bold = true })
-		vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#ee5396" })
+		vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#7E9CD8" })
+		vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#FF9E3B", bold = true })
+		vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#E46876" })
 	end,
 })
 

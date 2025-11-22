@@ -33,14 +33,12 @@ map("n", "<leader>e", ":Oil<CR>", { desc = "Open oil.nvim", silent = true })
 
 map("n", "ff", ":Pick files<CR>", { silent = true })
 map("n", "fg", ":Pick grep_live<CR>", { silent = true })
-map("n", "fd", ":Pick git_hunks scope='unstaged'<CR>", { silent = true })
+map("n", "fd", ":Pick git_hunks<CR>", { silent = true })
 map("n", "fx", ":Pick diagnostic scope='current'<CR>", { silent = true })
 map("n", "fs", ":Pick lsp scope='document_symbol'<CR>", { silent = true })
 
 map("n", "zR", require("ufo").openAllFolds)
 map("n", "zM", require("ufo").closeAllFolds)
-
-map("n", "<leader>xx", ":lua require('trouble').open('diagnostics')<cr>", { silent = true })
 
 function _G.set_terminal_keymaps()
 	local opts = { buffer = 0 }
