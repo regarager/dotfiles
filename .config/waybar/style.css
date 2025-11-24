@@ -8,7 +8,7 @@
 }
 
 window#waybar {
-  background-color: #1f1f28;
+  background-color: transparent;
   transition-property: background-color;
   transition-duration: 0.5s;
 }
@@ -54,8 +54,8 @@ window#waybar.hidden {
 #temperature,
 #tray,
 #custom-mouse-battery {
-  margin: 6px 0px;
-  padding: 0px 12px;
+  margin: 4px 10px;
+  padding: 0px 0px;
 }
 
 #battery.charging,
@@ -65,12 +65,8 @@ window#waybar.hidden {
 }
 
 tooltip {
-  border-radius: 8px;
-  padding: 15px;
-}
-
-tooltip label {
-  padding: 4px;
+  border-radius: 4px;
+  padding: 12px;
 }
 
 .modules-left {
@@ -79,10 +75,4 @@ tooltip label {
 
 .modules-right {
   margin-right: 4px;
-}
-
-.modules-left,
-.modules-center,
-.modules-right {
-  background-color: transparent;
 }

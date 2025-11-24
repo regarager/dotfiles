@@ -8,14 +8,13 @@
   ],
   "modules-right": [
     "tray",
-    "network",
-    "hyprland/language",
     "pulseaudio",
-    "temperature",
-    "battery",
     "custom/mouse-battery",
+    "temperature",
     "cpu",
-    "memory"
+    "memory",
+    "battery",
+    "network"
   ],
   "pulseaudio": {
     "scroll-step": 5,
@@ -30,8 +29,8 @@
     }
   },
   "network": {
-    "format-wifi": "  {ifname}",
-    "tooltip": false
+    "format-wifi": "{ifname}",
+    "tooltip-format-wifi": "{ipaddr}"
   },
   "temperature": {
     "format": " {temperatureC}°C",
@@ -55,7 +54,7 @@
     "spacing": 10
   },
   "clock": {
-    "format": " {:%I:%M %p 󰃶 %D}",
+    "format": "{:%H:%M %Y-%m-%d}",
     "tooltip": false
   },
   "cpu": {

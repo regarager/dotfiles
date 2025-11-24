@@ -68,7 +68,6 @@
       "rev": "dce9bc4",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
-    "neocord": [],
     "nightfox.nvim": {
       "rev": "ba47d4b",
       "src": "https://github.com/EdenEast/nightfox.nvim"
@@ -141,9 +140,6 @@
       "rev": "6bd02e9",
       "src": "https://github.com/mrcjkb/rustaceanvim"
     },
-    "telescope-fzf-native.nvim": [],
-    "telescope-themes": [],
-    "telescope.nvim": [],
     "todo-comments.nvim": {
       "rev": "31e3c38",
       "src": "https://github.com/folke/todo-comments.nvim"
