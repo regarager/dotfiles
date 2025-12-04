@@ -45,15 +45,6 @@ opt.fillchars:append({ eob = " " })
 
 vim.g.suda_smart_edit = 1
 
--- ensures line number colors are correct even after switching theme
-vim.api.nvim_create_autocmd("ColorScheme", {
-	callback = function()
-		vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#7E9CD8" })
-		vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#FF9E3B", bold = true })
-		vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#E46876" })
-	end,
-})
-
 require("kanagawa").setup({
 	colors = {
 		theme = {
@@ -68,3 +59,12 @@ require("kanagawa").setup({
 })
 
 vim.cmd("colorscheme kanagawa-wave")
+vim.cmd("set completeopt+=noselect")
+
+vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#7E9CD8" })
+vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#FF9E3B", bold = true })
+vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#E46876" })
+vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
+vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "none" })
+vim.api.nvim_set_hl(0, "FloatBorder", { link = "Normal" })
+vim.api.nvim_set_hl(0, "NormalFloat", { link = "Normal" })

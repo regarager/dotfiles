@@ -26,8 +26,17 @@ map("n", "<Tab>", function()
 	end
 end, { noremap = true, silent = true })
 
-map("n", "<leader>F", ":lua vim.lsp.buf.format()<CR>", { desc = "Format document", silent = true, noremap = true })
-map("n", "<leader>t", ":ToggleTerm<CR>", { desc = "Toggle terminal" })
+map(
+	"n",
+	"<leader>F",
+	":lua require'conform'.format({ async = true })<CR>",
+	{ desc = "Format document", silent = true, noremap = true }
+)
+map("n", "<leader>t", function()
+	vim.cmd("vnew")
+	vim.cmd("term")
+	vim.api.nvim_feedkeys("i", "n", false)
+end, { desc = "Toggle terminal", silent = true })
 
 map("n", "<leader>e", ":Oil<CR>", { desc = "Open oil.nvim", silent = true })
 

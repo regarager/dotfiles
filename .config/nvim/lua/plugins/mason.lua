@@ -16,25 +16,21 @@ mason.setup({
 
 mason_lspconfig.setup({
 	ensure_installed = {
-		"typos_lsp",
 		"bashls",
 		"biome",
 		"clangd",
+		"css_variables",
 		"cssls",
 		"cssmodules_ls",
-		"css_variables",
-		"tinymist",
-		"gopls",
 		"html",
 		"hyprls",
-		"jsonls",
-		"texlab",
-		"ts_ls",
 		"lua_ls",
 		"pyright",
 		"rust_analyzer",
-		"tailwindcss",
-		"zls",
+		"texlab",
+		"tinymist",
+		"ts_ls",
+		"typos_lsp",
 	},
 })
 

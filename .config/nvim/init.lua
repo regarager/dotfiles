@@ -9,7 +9,6 @@ require("plugins.cmp")
 require("plugins.formatting")
 require("plugins.mason")
 require("plugins.notebook")
-require("plugins.treesitter")
 
 -- misc setups
 vim.g.suda_smart_edit = 1
@@ -26,16 +25,19 @@ vim.api.nvim_create_autocmd("FileType", {
 
 require("gitsigns").setup()
 require("mini.extra").setup()
-require("mini.notify")
 require("mini.pairs").setup()
 require("mini.pick").setup()
-require("nvim-highlight-colors").setup()
+require("colorizer").setup()
 require("oil").setup()
-require("toggleterm").setup()
 
 vim.api.nvim_create_autocmd("BufWritePre", {
 	callback = function()
-		if vim.bo.filetype == "oil" or vim.bo.filetype == "suda" or vim.api.nvim_buf_get_name(0) == "" then
+		if
+			vim.bo.filetype == "oil"
+			or vim.bo.filetype == "suda"
+			or vim.bo.filetype == "term"
+			or vim.api.nvim_buf_get_name(0) == ""
+		then
 			return
 		end
 
@@ -44,15 +46,6 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 			vim.fn.mkdir(dir, "p")
 		end
 	end,
-})
-
-require("Comment").setup({
-	toggler = {
-		line = "<leader>/",
-	},
-	opleader = {
-		line = "<leader>/",
-	},
 })
 
 require("todo-comments").setup()
@@ -65,8 +58,27 @@ require("ufo").setup({
 
 require("nvim-ts-autotag").setup()
 
-require("lualine").setup({
-	options = {
-		theme = "kanagawa",
+require("lualine").setup({ options = { theme = "kanagawa" } })
+
+require("nvim-treesitter.configs").setup({
+	ensure_installed = {
+		"c",
+		"cpp",
+		"html",
+		"hyprlang",
+		"java",
+		"javascript",
+		"json",
+		"jsonc",
+		"lua",
+		"markdown",
+		"python",
+		"typescript",
+		"markdown_inline",
+		"typst",
 	},
+	sync_install = false,
+	auto_install = true,
+	highlight = { enable = true },
+	indent = { enable = true },
 })

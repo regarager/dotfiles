@@ -8,16 +8,13 @@ vim.lsp.enable({
 	"gopls",
 	"html",
 	"hyprls",
-	"jsonls",
 	"lua_ls",
 	"pyright",
 	"rust_analyzer",
-	"tailwindcss",
 	"texlab",
 	"tinymist",
 	"ts_ls",
 	"typos_lsp",
-	"zls",
 })
 
 vim.diagnostic.config({ virtual_text = true })
@@ -74,5 +71,3 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 require("luasnip.loaders.from_vscode").lazy_load()
-
-vim.cmd("set completeopt+=noselect")

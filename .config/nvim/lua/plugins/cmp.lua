@@ -2,6 +2,7 @@ local cmp = require("cmp")
 local luasnip = require("luasnip")
 
 require("luasnip.loaders.from_vscode").lazy_load()
+require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/lua/snippets/" })
 
 cmp.setup({
 	completion = {
@@ -19,7 +20,6 @@ cmp.setup({
 		{ name = "nvim_lsp" },
 		{ name = "luasnip" },
 		{ name = "path" },
-		-- { name = "buffer" },
 	}),
 	window = {
 		completion = cmp.config.window.bordered(),

@@ -18,10 +18,10 @@ require("conform").setup({
 		rust = { "rustfmt" },
 		["*"] = { "trim_whitespace" },
 	},
-	format_on_save = {
-		lsp_fallback = true,
-		timeout_ms = 2000,
-	},
+	-- format_on_save = {
+	-- 	lsp_fallback = true,
+	-- 	timeout_ms = 2000,
+	-- },
 })
 
 -- Source: https://astyle.sourceforge.net/astyle.html
