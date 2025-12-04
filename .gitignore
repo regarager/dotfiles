@@ -1,2 +1,3 @@
 .config/nvim/lazy-lock.json
+.config/nvim/nvim-pack-lock.json
 .config/nvim/lua/current-theme.lua
