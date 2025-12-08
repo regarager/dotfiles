@@ -36,7 +36,7 @@ vim.lsp.config("tinymist", {
 })
 
 vim.lsp.config("clangd", {
-	cmd = { "clangd", "--header-insertion=never" },
+	cmd = { "clangd", "--header-insertion=never", "--function-arg-placeholders=false" },
 })
 
 vim.lsp.config("lua_ls", {

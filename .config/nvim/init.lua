@@ -11,13 +11,11 @@ require("plugins.mason")
 require("plugins.notebook")
 
 -- misc setups
-vim.g.suda_smart_edit = 1
-
 vim.opt.rtp:append("~/Projects/cheesepizza.nvim/")
 require("cheesepizza").setup()
 
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "python", "java", "cpp" },
+	pattern = "*.cpp",
 	callback = function()
 		vim.keymap.set("n", "<leader>r", ":RunTerm<CR>")
 	end,
@@ -25,6 +23,7 @@ vim.api.nvim_create_autocmd("FileType", {
 
 require("gitsigns").setup()
 require("mini.extra").setup()
+require("mini.icons").setup()
 require("mini.pairs").setup()
 require("mini.pick").setup()
 require("colorizer").setup()
@@ -34,7 +33,6 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 	callback = function()
 		if
 			vim.bo.filetype == "oil"
-			or vim.bo.filetype == "suda"
 			or vim.bo.filetype == "term"
 			or vim.api.nvim_buf_get_name(0) == ""
 		then
@@ -50,35 +48,17 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 
 require("todo-comments").setup()
 
-require("ufo").setup({
-	provider_selector = function()
-		return { "treesitter", "indent" }
-	end,
-})
-
 require("nvim-ts-autotag").setup()
 
 require("lualine").setup({ options = { theme = "kanagawa" } })
 
 require("nvim-treesitter.configs").setup({
-	ensure_installed = {
-		"c",
-		"cpp",
-		"html",
-		"hyprlang",
-		"java",
-		"javascript",
-		"json",
-		"jsonc",
-		"lua",
-		"markdown",
-		"python",
-		"typescript",
-		"markdown_inline",
-		"typst",
-	},
+	ensure_installed = { "c", "cpp", "lua", "python" },
 	sync_install = false,
 	auto_install = true,
 	highlight = { enable = true },
 	indent = { enable = true },
 })
+
+require("luasnip.loaders.from_vscode").lazy_load()
+require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/lua/snippets/" })

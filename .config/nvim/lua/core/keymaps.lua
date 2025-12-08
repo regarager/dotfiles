@@ -46,8 +46,8 @@ map("n", "fd", ":Pick git_hunks<CR>", { silent = true })
 map("n", "fx", ":Pick diagnostic scope='current'<CR>", { silent = true })
 map("n", "fs", ":Pick lsp scope='document_symbol'<CR>", { silent = true })
 
-map("n", "zR", require("ufo").openAllFolds)
-map("n", "zM", require("ufo").closeAllFolds)
+-- map("n", "zR", require("ufo").openAllFolds)
+-- map("n", "zM", require("ufo").closeAllFolds)
 
 function _G.set_terminal_keymaps()
 	local opts = { buffer = 0 }
@@ -58,5 +58,13 @@ function _G.set_terminal_keymaps()
 	map("t", "<C-l>", [[<Cmd>wincmd l<CR>]], opts)
 	map("t", "<C-w>", [[<C-\><C-n><C-w>]], opts)
 end
+
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "python", "java", "cpp" },
+	callback = function()
+		vim.keymap.set("n", "<leader>r", ":RunTerm<CR>")
+	end,
+})
 
 vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")

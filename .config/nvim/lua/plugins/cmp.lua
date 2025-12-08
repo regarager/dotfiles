@@ -1,80 +1,29 @@
-local cmp = require("cmp")
-local luasnip = require("luasnip")
-
-require("luasnip.loaders.from_vscode").lazy_load()
-require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/lua/snippets/" })
-
-cmp.setup({
+require("blink.cmp").setup({
 	completion = {
-		completeopt = "menu,menuone,preview",
+		ghost_text = { enabled = true },
+		menu = {
+			draw = {
+				padding = { 0, 1 }, -- padding only on right side
+				components = {
+					kind_icon = {
+						text = function(ctx)
+							return " " .. ctx.kind_icon .. ctx.icon_gap .. " "
+						end,
+					},
+				},
+			},
+		},
 	},
-	snippet = {
-		expand = function(args)
-			luasnip.lsp_expand(args.body)
-		end,
+	keymap = { preset = "super-tab" },
+	signature = { enabled = true },
+	snippets = {
+		preset = "luasnip",
 	},
-	mapping = cmp.mapping.preset.insert({
-		["<Tab>"] = cmp.mapping.confirm({ select = false }),
-	}),
-	sources = cmp.config.sources({
-		{ name = "nvim_lsp" },
-		{ name = "luasnip" },
-		{ name = "path" },
-	}),
-	window = {
-		completion = cmp.config.window.bordered(),
-		documentation = cmp.config.window.bordered(),
-	},
-	formatting = {
-		fields = { "kind", "abbr", "menu" },
-		format = function(entry, vim_item)
-			local kind = require("lspkind").cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry, vim_item)
-			local strings = vim.split(kind.kind, "%s", { trimempty = true })
-			kind.kind = " " .. (strings[1] or "") .. " "
-			kind.menu = "    (" .. (strings[2] or "") .. ")"
-
-			return kind
-		end,
+	sources = {
+		default = { "lsp", "snippets", "path" },
 	},
 })
 
-vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#394b70", fg = "NONE" })
-vim.api.nvim_set_hl(0, "Pmenu", { fg = "#C5CDD9", bg = "#22252A" })
-
-vim.api.nvim_set_hl(0, "CmpItemAbbrDeprecated", { fg = "#7E8294", bg = "NONE", strikethrough = true })
-vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", { fg = "#82AAFF", bg = "NONE", bold = true })
-vim.api.nvim_set_hl(0, "CmpItemAbbrMatchFuzzy", { fg = "#82AAFF", bg = "NONE", bold = true })
-vim.api.nvim_set_hl(0, "CmpItemMenu", { fg = "#C792EA", bg = "NONE", italic = true })
-
-vim.api.nvim_set_hl(0, "CmpItemKindField", { fg = "#0db9d7", bg = "NONE" })
-vim.api.nvim_set_hl(0, "CmpItemKindProperty", { fg = "#0db9d7", bg = "NONE" })
-vim.api.nvim_set_hl(0, "CmpItemKindEvent", { fg = "#0db9d7", bg = "NONE" })
-
-vim.api.nvim_set_hl(0, "CmpItemKindText", { fg = "#c3e88d", bg = "NONE" })
-vim.api.nvim_set_hl(0, "CmpItemKindEnum", { fg = "#c3e88d", bg = "NONE" })
-vim.api.nvim_set_hl(0, "CmpItemKindKeyword", { fg = "#c3e88d", bg = "NONE" })
-
-vim.api.nvim_set_hl(0, "CmpItemKindConstant", { fg = "#ffe082", bg = "NONE" })
-vim.api.nvim_set_hl(0, "CmpItemKindConstructor", { fg = "#ffe082", bg = "NONE" })
-vim.api.nvim_set_hl(0, "CmpItemKindReference", { fg = "#ffe082", bg = "NONE" })
-
-vim.api.nvim_set_hl(0, "CmpItemKindFunction", { fg = "#c099ff", bg = "NONE" })
-vim.api.nvim_set_hl(0, "CmpItemKindStruct", { fg = "#c099ff", bg = "NONE" })
-vim.api.nvim_set_hl(0, "CmpItemKindClass", { fg = "#c099ff", bg = "NONE" })
-vim.api.nvim_set_hl(0, "CmpItemKindModule", { fg = "#c099ff", bg = "NONE" })
-vim.api.nvim_set_hl(0, "CmpItemKindOperator", { fg = "#c099ff", bg = "NONE" })
-
-vim.api.nvim_set_hl(0, "CmpItemKindVariable", { fg = "#ff757f", bg = "NONE" })
-vim.api.nvim_set_hl(0, "CmpItemKindFile", { fg = "#ff757f", bg = "NONE" })
-
-vim.api.nvim_set_hl(0, "CmpItemKindUnit", { fg = "#ff966c", bg = "NONE" })
-vim.api.nvim_set_hl(0, "CmpItemKindSnippet", { fg = "#ff966c", bg = "NONE" })
-vim.api.nvim_set_hl(0, "CmpItemKindFolder", { fg = "#ff966c", bg = "NONE" })
-
-vim.api.nvim_set_hl(0, "CmpItemKindMethod", { fg = "#82aaff", bg = "NONE" })
-vim.api.nvim_set_hl(0, "CmpItemKindValue", { fg = "#82aaff", bg = "NONE" })
-vim.api.nvim_set_hl(0, "CmpItemKindEnumMember", { fg = "#82aaff", bg = "NONE" })
-
-vim.api.nvim_set_hl(0, "CmpItemKindInterface", { fg = "#4fd6be", bg = "NONE" })
-vim.api.nvim_set_hl(0, "CmpItemKindColor", { fg = "#4fd6be", bg = "NONE" })
-vim.api.nvim_set_hl(0, "CmpItemKindTypeParameter", { fg = "#4fd6be", bg = "NONE" })
+vim.api.nvim_set_hl(0, "BlinkCmpMenu", { link = "normal" })
+vim.api.nvim_set_hl(0, "BlinkCmpMenuBorder", { link = "normal" })
+vim.api.nvim_set_hl(0, "BlinkCmpMenuSelection", { link = "CursorLine" })

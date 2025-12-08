@@ -40,10 +40,10 @@ opt.foldcolumn = "0"
 opt.foldlevel = 99
 opt.foldlevelstart = 99
 opt.foldenable = true
+opt.foldmethod = "expr"
+opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 opt.fillchars:append({ eob = " " })
-
-vim.g.suda_smart_edit = 1
 
 require("kanagawa").setup({
 	colors = {

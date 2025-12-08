@@ -27,7 +27,6 @@ mason_lspconfig.setup({
 		"lua_ls",
 		"pyright",
 		"rust_analyzer",
-		"texlab",
 		"tinymist",
 		"ts_ls",
 		"typos_lsp",
