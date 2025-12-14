@@ -1,7 +1,5 @@
 local mason = require("mason")
-
 local mason_lspconfig = require("mason-lspconfig")
-
 local mason_tool_installer = require("mason-tool-installer")
 
 mason.setup({
@@ -17,15 +15,13 @@ mason.setup({
 mason_lspconfig.setup({
 	ensure_installed = {
 		"bashls",
-		"biome",
 		"clangd",
 		"css_variables",
 		"cssls",
 		"cssmodules_ls",
 		"html",
-		"hyprls",
 		"lua_ls",
-		"pyright",
+		"basedpyright",
 		"rust_analyzer",
 		"tinymist",
 		"ts_ls",
@@ -34,10 +30,9 @@ mason_lspconfig.setup({
 })
 
 mason_tool_installer.setup({
-	"prettierd",
-	"stylua",
-	"isort",
 	"black",
 	"clang-format",
+	"isort",
+	"stylua",
 	"typstyle",
 })

@@ -1,23 +1,17 @@
 vim.lsp.enable({
 	"bashls",
-	"biome",
 	"clangd",
 	"css_variables",
 	"cssls",
 	"cssmodules_ls",
-	"gopls",
 	"html",
-	"hyprls",
 	"lua_ls",
-	"pyright",
+	"basedpyright",
 	"rust_analyzer",
-	"texlab",
 	"tinymist",
 	"ts_ls",
 	"typos_lsp",
 })
-
-vim.diagnostic.config({ virtual_text = true })
 
 vim.api.nvim_create_autocmd("LspAttach", {
 	group = vim.api.nvim_create_augroup("UserLspConfig", {}),
@@ -30,8 +24,14 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "javascriptreact,typescriptreact",
+	callback = function()
+		vim.b.disable_react_tag_warning = true
+	end,
+})
+
 vim.lsp.config("tinymist", {
-	formatterMode = "typstyle",
 	exportPdf = "onSave",
 })
 
@@ -62,12 +62,3 @@ vim.lsp.config("lua_ls", {
 		Lua = {},
 	},
 })
-
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "javascriptreact,typescriptreact",
-	callback = function()
-		vim.b.disable_react_tag_warning = true
-	end,
-})
-
-require("luasnip.loaders.from_vscode").lazy_load()

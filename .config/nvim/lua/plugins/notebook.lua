@@ -14,6 +14,7 @@ vim.keymap.set(
 	"<cmd>JupyterDeleteCell<CR>",
 	{ desc = "Delete cell under cursor and store in register" }
 )
+
 require("nvim-python-repl").setup({
 	execute_on_send = true,
 	vsplit = true,

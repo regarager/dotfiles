@@ -1,7 +1,4 @@
-local ls = require("luasnip")
-local i = ls.insert_node
-local s = ls.snippet
-local fmt = require("luasnip.extras.fmt").fmt
+---@diagnostic disable: undefined-global
 
 return {
 	s(
