@@ -45,20 +45,9 @@ opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 opt.fillchars:append({ eob = " " })
 
-require("kanagawa").setup({
-	colors = {
-		theme = {
-			all = {
-				ui = {
-					bg_gutter = "none",
-					bg = "none",
-				},
-			},
-		},
-	},
-})
+require("kanagawa").setup({ transparent = true, theme = "wave" })
 
-vim.cmd("colorscheme kanagawa-wave")
+vim.cmd("colorscheme kanagawa")
 vim.cmd("set completeopt+=noselect")
 
 vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#7E9CD8" })
