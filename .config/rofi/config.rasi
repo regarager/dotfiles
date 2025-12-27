@@ -4,8 +4,8 @@ configuration {
 }
 
 * {
-  selected-normal-foreground:  rgb(249, 249, 249);
-  foreground:                  rgb(196, 203, 212);
+  selected-normal-foreground:  #dcd7ba;
+  foreground:                  #dcd7ba;
   normal-foreground:           @foreground;
   alternate-normal-background: rgb(0, 0, 0, 0%);
   red:                         rgb(220, 50, 47, 100%);
@@ -22,7 +22,7 @@ configuration {
   normal-background:           @background;
   lightfg:                     rgb(88, 104, 117, 100%);
   selected-normal-background:  rgb(64, 132, 0, 0%);
-  border-color:                rgb(124, 131, 137, 100%);
+  border-color:                #dcd7ba;
   spacing:                     2;
   separatorcolor:              rgb(29, 31, 33, 100%);
   urgent-background:           rgb(29, 31, 33, 17%);
@@ -40,7 +40,7 @@ entry {
 }
 
 entry, element-text {
-  text-color: white;
+  text-color: #dcd7ba;
 }
 
 element {
@@ -64,8 +64,9 @@ element-icon, element-text {
 }
 
 window {
-  border-radius: 1em;
-  background-color: rgba(24, 24, 24, 0.6);
+  border-radius: 0.5em;
+  border: 1;
+  background-color: #1f1f28;
   width: var(width, 40%);
   height: var(height, 50%);
   padding: 16px;
