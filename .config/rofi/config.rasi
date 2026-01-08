@@ -22,7 +22,7 @@ configuration {
   normal-background:           @background;
   lightfg:                     rgb(88, 104, 117, 100%);
   selected-normal-background:  rgb(64, 132, 0, 0%);
-  border-color:                #dcd7ba;
+  border-color:                #7e9cd8;
   spacing:                     2;
   separatorcolor:              rgb(29, 31, 33, 100%);
   urgent-background:           rgb(29, 31, 33, 17%);
@@ -65,7 +65,7 @@ element-icon, element-text {
 
 window {
   border-radius: 0.5em;
-  border: 1;
+  border: 2;
   background-color: #1f1f28;
   width: var(width, 40%);
   height: var(height, 50%);

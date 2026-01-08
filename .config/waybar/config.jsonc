@@ -8,11 +8,11 @@
   ],
   "modules-right": [
     "tray",
+    "hyprland/language",
     "pulseaudio",
     "custom/mouse-battery",
     "temperature",
     "cpu",
-    "memory",
     "battery",
     "network"
   ],
