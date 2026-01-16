@@ -4,7 +4,8 @@ source ~/shiko-prompt/shiko.zsh
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-bindkey -v
+set -o vi
+bindkey -v '^?' backward-delete-char
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '$HOME/.zshrc'
@@ -31,6 +32,7 @@ eval "$(zoxide init zsh)"
 export GPG_TTY=$(tty)
 
 export HYPRSHOT_DIR="$HOME/Pictures/Screenshots"
+export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/config"
 export BAT_THEME="OneHalfDark"
 export MANPAGER='nvim +Man!'
 
