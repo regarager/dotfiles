@@ -43,7 +43,7 @@ vim.pack.add({
 
 require("blink.cmp").setup({
 	completion = { menu = { auto_show = false } },
-	keymap = { preset = "cmdline" },
+	keymap = { preset = "super-tab" },
 	signature = { enabled = true },
 	snippets = { preset = "luasnip" },
 	sources = { default = { "lsp", "snippets", "path" } },
@@ -86,6 +86,7 @@ vim.api.nvim_set_hl(0, "BlinkCmpMenuSelection", { link = "CursorLine" })
 
 -- keymaps
 map("n", "<leader>w", ":w<CR>")
+map("n", "<leader>wq", ":wq<CR>")
 map("n", "<leader>h", "<C-w>h")
 map("n", "<leader>j", "<C-w>j")
 map("n", "<leader>k", "<C-w>k")
