@@ -43,7 +43,7 @@ vim.pack.add({
 
 require("blink.cmp").setup({
 	completion = { menu = { auto_show = false } },
-	keymap = { preset = "super-tab" },
+	keymap = { ["<Tab>"] = { "show", "select_next" } },
 	signature = { enabled = true },
 	snippets = { preset = "luasnip" },
 	sources = { default = { "lsp", "snippets", "path" } },
@@ -54,7 +54,7 @@ require("conform").setup({
 		c = { "clang-format" },
 		cpp = { "clang-format" },
 		lua = { "stylua" },
-		python = { "black", "isort" },
+		python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
 		rust = { "rustfmt" },
 		typst = { "typstyle" },
 		["*"] = { "trim_whitespace" },
@@ -86,7 +86,6 @@ vim.api.nvim_set_hl(0, "BlinkCmpMenuSelection", { link = "CursorLine" })
 
 -- keymaps
 map("n", "<leader>w", ":w<CR>")
-map("n", "<leader>wq", ":wq<CR>")
 map("n", "<leader>h", "<C-w>h")
 map("n", "<leader>j", "<C-w>j")
 map("n", "<leader>k", "<C-w>k")
@@ -130,6 +129,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 })
 
 -- lsp
-vim.lsp.enable({ "basedpyright", "clangd", "lua_ls", "rust_analyzer" })
-vim.lsp.config("tinymist", { exportPdf = "onSave" })
 vim.lsp.config("clangd", { cmd = { "clangd", "--function-arg-placeholders=false" } })
+vim.lsp.config("tinymist", { exportPdf = "onSave" })
+
+vim.lsp.enable({ "clangd", "lua_ls", "pyright", "rust_analyzer" })

@@ -6,20 +6,21 @@ return {
 		fmt(
 			[[
 #include <bits/stdc++.h>
-#define int long long
 using namespace std;
 
-using ld = long double;
-using pi = pair<int, int>;
-using graph = vector<vector<int>>;
-
+#define int long long
 #define has(x, y) x.find(y) != x.end()
 #define all(x) x.begin(), x.end()
 #define YES cout << "YES" << endl;
 #define NO cout << "NO" << endl;
+#define YESNO(x) cout << (x) ? "YES" : "NO" << endl;
 #define DEBUG_MODE true
 #define DEBUG if (DEBUG_MODE)
 #define NOTDEBUG if (!DEBUG_MODE)
+
+using ld = long double;
+using pi = pair<int, int>;
+using graph = vector<vector<int>>;
 
 const int SIZE = 2e5 + 5;
 const int INF = 1e15;
@@ -175,5 +176,14 @@ void union_sets(int a, int b) {{
   ]],
 			{}
 		)
+	),
+	s(
+		"omst",
+		t({
+			"#include <ext/pb_ds/assoc_container.hpp>",
+			"using namespace __gnu_pbds;",
+			"template <class T>",
+			"using omst = tree<T, null_type, std::less<T>, rb_tree_tag, tree_order_statistics_node_update>;",
+		})
 	),
 }
