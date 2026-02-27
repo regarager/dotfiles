@@ -30,7 +30,7 @@
   },
   "network": {
     "format-wifi": "{ifname}",
-    "tooltip-format-wifi": "{ipaddr}"
+    "tooltip-format-wifi": "{essid}"
   },
   "temperature": {
     "format": " {temperatureC}°C",
