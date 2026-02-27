@@ -42,9 +42,31 @@ vim.pack.add({
 })
 
 require("blink.cmp").setup({
-	completion = { menu = { auto_show = false } },
-	keymap = { ["<Tab>"] = { "show", "select_next" } },
-	signature = { enabled = true },
+	completion = {
+		menu = { auto_show = false },
+		list = { selection = { preselect = false, auto_insert = true } },
+	},
+	keymap = {
+		["<Tab>"] = {
+			function(cmp)
+				if cmp.is_visible() then
+					return cmp.select_next({ auto_insert = true })
+				else
+					return cmp.show({ initial_selected_item_idx = 1 })
+				end
+			end,
+		},
+		["<S-Tab>"] = {
+			function(cmp)
+				if cmp.is_visible() then
+					return cmp.select_prev({ auto_insert = true })
+				else
+					return "fallback"
+				end
+			end,
+		},
+		["<CR>"] = { "select_and_accept", "fallback" },
+	},
 	snippets = { preset = "luasnip" },
 	sources = { default = { "lsp", "snippets", "path" } },
 })
@@ -131,5 +153,4 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 -- lsp
 vim.lsp.config("clangd", { cmd = { "clangd", "--function-arg-placeholders=false" } })
 vim.lsp.config("tinymist", { exportPdf = "onSave" })
-
 vim.lsp.enable({ "clangd", "lua_ls", "pyright", "rust_analyzer" })
