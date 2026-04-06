@@ -44,8 +44,9 @@
     "format-charging": " {capacity}%",
     "format-plugged": " {capacity}%",
     "format-alt": "{time} {icon}",
+    "tooltip-format": "{time} - {capacity}%",
     "format-icons": [
-      "󱊡", "󱊢", "󱊣"
+      "󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"
     ],
     "interval": 5
   },
