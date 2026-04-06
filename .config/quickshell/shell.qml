@@ -48,6 +48,8 @@ PanelWindow {
     spacing: 8
 
     Tray {}
-    Battery {}
+    BatteryIcon {}
+    // Battery {}
+    Network {}
   }
 }

@@ -8,6 +8,7 @@ opt.clipboard:append("unnamedplus")
 opt.tabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
+opt.autoindent = true
 opt.smartindent = true
 opt.number = true
 opt.relativenumber = true
@@ -119,6 +120,10 @@ map("n", "<leader>e", ":Oil<CR>")
 map("n", "ff", ":Pick files<CR>")
 map("n", "fg", ":Pick grep_live<CR>")
 map("n", ";", ":!")
+map("v", "<Tab>", ">gv")
+map("v", "<S-Tab>", "<gv")
+map("n", "<Tab>", ">>")
+map("n", "<S-Tab>", "<<")
 map("n", "<leader>t", function()
 	vim.cmd("vnew")
 	vim.cmd("term")

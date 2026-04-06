@@ -13,7 +13,7 @@ RowLayout {
       leftPadding: 10
       rightPadding: 10
       topPadding: 4
-      bottomPadding: 4
+      bottomPadding: 6
       property bool isActive: Hyprland.focusedWorkspace?.id === (modelData.id)
 
       text: index + 1
