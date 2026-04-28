@@ -32,6 +32,7 @@ opt.swapfile = false
 -- plugin setup
 vim.pack.add({
 	{ src = "https://github.com/L3MON4D3/LuaSnip" },
+	{ src = "https://github.com/OXY2DEV/markview.nvim" },
 	{ src = "https://github.com/neovim/nvim-lspconfig" },
 	{ src = "https://github.com/nvim-mini/mini.nvim" },
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "master" },
@@ -86,6 +87,11 @@ require("conform").setup({
 require("diagnostics").setup()
 require("kanagawa").setup({ transparent = true, theme = "wave" })
 require("luasnip.loaders.from_lua").lazy_load({ paths = { "~/.config/nvim/lua/snippets" } })
+require("markview").setup({
+	typst = {
+		enabled = false,
+	},
+})
 require("mini.extra").setup()
 require("mini.icons").setup()
 require("mini.move").setup()

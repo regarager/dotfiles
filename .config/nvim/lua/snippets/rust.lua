@@ -41,4 +41,35 @@ fn main() {{
 			{ delimiters = "{}" }
 		)
 	),
+	s(
+		"gcd",
+		t({
+			"fn gcd(mut a: u64, mut b: u64) -> u64 {",
+			"  while b != 0 {",
+			"    let temp = b;",
+			"    b = a % b;",
+			"    a = temp;",
+			"  }",
+			"  a",
+			"}",
+		})
+	),
+	s(
+		"modpow",
+		t({
+			"fn mpow(mut a: u64, mut b: u64, m: u64) -> u64 {",
+			"  let mut res = 1;",
+			"  a %= m;",
+			"",
+			"  while b > 0 {",
+			"    if b & 1 == 1 {",
+			"      res = (res * a) % m;",
+			"    }",
+			"    a = (a * a) % m;",
+			"    b >>= 1;",
+			"  }",
+			"  res",
+			"}",
+		})
+	),
 }
