@@ -5,7 +5,7 @@ cd yay && makepkg -si && cd ..
 echo "Installing programs"
 yay -S --noconfirm --needed \
   zsh stow ghostty neovim \
-  zen-browser-bin nautilus vesktop gthumb \
+  zen-browser-bin nautilus vesktop-bin gthumb \
   mpd rmpc cava \
   bat battop btop cpupower eza fastfetch fzf git-delta github-cli grep imagemagick less net-tools ripgrep thefuck tmux tree-sitter tree-sitter-cli unzip zoxide zsh-syntax-highlighting \
   python-numpy python-pillow miniconda3 conda-zsh-completion \

@@ -87,18 +87,14 @@ require("conform").setup({
 require("diagnostics").setup()
 require("kanagawa").setup({ transparent = true, theme = "wave" })
 require("luasnip.loaders.from_lua").lazy_load({ paths = { "~/.config/nvim/lua/snippets" } })
-require("markview").setup({
-	typst = {
-		enabled = false,
-	},
-})
+require("markview").setup()
 require("mini.extra").setup()
 require("mini.icons").setup()
 require("mini.move").setup()
 require("mini.pick").setup({ window = { config = { height = 8, width = 64 } } })
 require("mini.pairs").setup()
 require("nvim-treesitter.configs").setup({
-	ensure_installed = { "c", "cpp", "lua", "python" },
+	ensure_installed = { "c", "cpp", "lua", "python", "rust", "typst" },
 	highlight = { enable = true },
 	indent = { enable = true },
 })
