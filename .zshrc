@@ -28,7 +28,7 @@ zstyle ':vcs:info:git:*' formats '%b '
 export TERM='xterm-256color'
 
 zsh-defer source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-zsh-defer source ~/fzf-tab/fzf-tab.plugin.zsh
+source ~/fzf-tab/fzf-tab.plugin.zsh
 
 eval "$(zoxide init zsh)"
 
@@ -57,7 +57,7 @@ alias v="nvim"
 alias vzsh="nvim ~/.zshrc"
 
 bak () {
-  mv "$1" "$1.bak"
+  cp -aL "$1" "$1.bak"
 }
 
 copy() {

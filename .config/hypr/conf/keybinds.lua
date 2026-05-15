@@ -3,8 +3,9 @@ local mainMod = "SUPER"
 
 -- Basic binds
 hl.bind(mainMod .. "+ T", hl.dsp.exec_cmd(programs.terminal))
+hl.bind("SUPER + SHIFT + code:201", hl.dsp.exec_cmd(programs.terminal .. " -e /bin/zsh -l"))
 hl.bind(mainMod .. "+ F", hl.dsp.exec_cmd(programs.browser))
-hl.bind(mainMod .. "+ Q", hl.dsp.window.kill())
+hl.bind(mainMod .. "+ Q", hl.dsp.window.close())
 hl.bind(mainMod .. "+ SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. "+ E", hl.dsp.exec_cmd(programs.fileManager))
 hl.bind(mainMod .. "+ V", hl.dsp.window.float())
@@ -24,8 +25,8 @@ for i = 1, 9 do
 end
 
 -- Move to next/prev workspace
-hl.bind(mainMod .. " + bracketright", hl.dsp.focus({ monitor = "+1" }))
-hl.bind(mainMod .. " + bracketleft", hl.dsp.focus({ monitor = "-1" }))
+hl.bind(mainMod .. " + bracketright", hl.dsp.focus({ workspace = "e+1" }))
+hl.bind(mainMod .. " + bracketleft", hl.dsp.focus({ workspace = "e-1" }))
 
 -- Fullscreen
 hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen())
@@ -36,13 +37,19 @@ hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize())
 
 -- Screenshots (grimblast)
 hl.bind(
-	"Control_L + Alt_L + 3",
-	hl.dsp.exec_cmd("grimblast --notify --freeze copysave output ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%m-%s).png")
+	"CONTROL + ALT + Control_L + Alt_L + 3",
+	hl.dsp.exec_cmd("grimblast --notify --freeze copysave output ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%m-%s).png"),
+	{ release = true }
 )
-hl.bind("Control_L + Alt_L + 4", hl.dsp.exec_cmd("hyprpicker --autocopy --format=hex --lower"))
 hl.bind(
-	"Control_L + Alt_L + 5",
-	hl.dsp.exec_cmd("grimblast --notify --freeze copysave area ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%m-%s).png")
+	"CONTROL + ALT + Control_L + Alt_L + 4",
+	hl.dsp.exec_cmd("hyprpicker --autocopy --format=hex --lower"),
+	{ release = true }
+)
+hl.bind(
+	"CONTROL + ALT + Control_L + Alt_L + 5",
+	hl.dsp.exec_cmd("grimblast --notify --freeze copysave area ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%m-%s).png"),
+	{ release = true }
 )
 
 -- Media keys
