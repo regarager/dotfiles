@@ -19,3 +19,4 @@ confirm-close-surface = false
 title = " "
 window-inherit-working-directory = true
 window-decoration = false
+gtk-single-instance = true
