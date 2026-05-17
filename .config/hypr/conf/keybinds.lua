@@ -25,8 +25,8 @@ for i = 1, 9 do
 end
 
 -- Move to next/prev workspace
-hl.bind(mainMod .. " + bracketright", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind(mainMod .. " + bracketleft", hl.dsp.focus({ workspace = "e-1" }))
+hl.bind(mainMod .. " + bracketright", hl.dsp.focus({ workspace = "+1" }))
+hl.bind(mainMod .. " + bracketleft", hl.dsp.focus({ workspace = "-1" }))
 
 -- Fullscreen
 hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen())
@@ -61,4 +61,4 @@ hl.bind("XF86AudioMute", hl.dsp.exec_cmd("pactl set-sink-mute @DEFAULT_SINK@ tog
 
 -- Scripts
 hl.bind(mainMod .. " + Backspace", hl.dsp.exec_cmd("rofi -show p -modi p:rofi-power-menu"))
-hl.bind("SHIFT + Control_L + M", hl.dsp.pass({ window = "class:vesktop" }))
+hl.bind("CONTROL + SHIFT + M", hl.dsp.pass({ window = "class:vesktop" }))
