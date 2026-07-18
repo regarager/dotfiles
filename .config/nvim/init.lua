@@ -33,46 +33,25 @@ opt.swapfile = false
 vim.pack.add({
 	{ src = "https://github.com/L3MON4D3/LuaSnip" },
 	{ src = "https://github.com/OXY2DEV/markview.nvim" },
+	{ src = "https://github.com/arborist-ts/arborist.nvim" },
 	{ src = "https://github.com/neovim/nvim-lspconfig" },
 	{ src = "https://github.com/nvim-mini/mini.nvim" },
-	{ src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "master" },
 	{ src = "https://github.com/rebelot/kanagawa.nvim" },
-	{ src = "https://github.com/regarager/cheesepizza.nvim" },
 	{ src = "https://github.com/saghen/blink.cmp", version = vim.version.range("1.0") },
 	{ src = "https://github.com/stevearc/conform.nvim" },
 	{ src = "https://github.com/stevearc/oil.nvim" },
 })
 
+require("arborist").setup({
+	highlight = { enable = true },
+	indent = { enable = true },
+	ensure_installed = { "c", "cpp", "lua", "markdown", "python", "rust", "typst" },
+})
 require("blink.cmp").setup({
-	completion = {
-		menu = { auto_show = false },
-		list = { selection = { preselect = false, auto_insert = true } },
-	},
-	keymap = {
-		["<Tab>"] = {
-			function(cmp)
-				if cmp.is_visible() then
-					return cmp.select_next({ auto_insert = true })
-				else
-					return cmp.show({ initial_selected_item_idx = 1 })
-				end
-			end,
-		},
-		["<S-Tab>"] = {
-			function(cmp)
-				if cmp.is_visible() then
-					return cmp.select_prev({ auto_insert = true })
-				else
-					return "fallback"
-				end
-			end,
-		},
-		["<CR>"] = { "select_and_accept", "fallback" },
-	},
+	keymap = { preset = "super-tab" },
 	snippets = { preset = "luasnip" },
 	sources = { default = { "lsp", "snippets", "path" } },
 })
-require("cheesepizza").setup()
 require("conform").setup({
 	formatters_by_ft = {
 		c = { "clang-format" },
@@ -93,11 +72,6 @@ require("mini.icons").setup()
 require("mini.move").setup()
 require("mini.pick").setup({ window = { config = { height = 8, width = 64 } } })
 require("mini.pairs").setup()
-require("nvim-treesitter.configs").setup({
-	ensure_installed = { "c", "cpp", "lua", "python", "rust", "typst" },
-	highlight = { enable = true },
-	indent = { enable = true },
-})
 require("oil").setup()
 
 vim.cmd("colorscheme kanagawa")
