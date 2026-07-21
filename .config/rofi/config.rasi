@@ -21,7 +21,7 @@ configuration {
   alternate-normal-foreground: @foreground;
   normal-background:           @background;
   lightfg:                     rgb(88, 104, 117, 100%);
-  selected-normal-background:  rgb(64, 132, 0, 0%);
+  selected-normal-background:  #363646;
   border-color:                #7e9cd8;
   spacing:                     2;
   separatorcolor:              rgb(29, 31, 33, 100%);
