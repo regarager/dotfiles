@@ -10,4 +10,6 @@ hl.on("hyprland.start", function()
 
 	hl.exec_cmd("vesktop", { workspace = 1 })
 	hl.exec_cmd(programs.browser, { workspace = 2 })
+
+  hl.exec_cmd("hyprpm reload")
 end)

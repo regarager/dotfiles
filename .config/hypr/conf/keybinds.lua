@@ -3,7 +3,7 @@ local mainMod = "SUPER"
 
 -- Basic binds
 hl.bind(mainMod .. "+ T", hl.dsp.exec_cmd(programs.terminal))
-hl.bind("SUPER + SHIFT + code:201", hl.dsp.exec_cmd(programs.terminal .. " -e /bin/zsh -l"))
+hl.bind(mainMod .. "+ SHIFT + T", hl.dsp.exec_cmd(programs.terminal .. " -e /bin/zsh -l"))
 hl.bind(mainMod .. "+ F", hl.dsp.exec_cmd(programs.browser))
 hl.bind(mainMod .. "+ Q", hl.dsp.window.close())
 hl.bind(mainMod .. "+ SHIFT + L", hl.dsp.exec_cmd("hyprlock"))

@@ -55,4 +55,13 @@ sudo cp keyd.conf /etc/keyd/default.conf
 
 echo "Finished setting up git-delta options"
 
+echo "Setting default applications"
+xdg-mime default org.gnome.Nautilus.desktop inode/directory
+gsettings set org.gnome.desktop.default-applications.terminal exec 'ghostty'
+gsettings set org.gnome.desktop.default-applications.terminal exec-arg '-e'
+
+hyprpm add https://github.com/yayuuu/hyprland-scroll-overview.git
+hyprpm update
+hyprpm enable scrolloverview
+
 echo "Done!"
