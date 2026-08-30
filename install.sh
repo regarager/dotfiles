@@ -10,7 +10,7 @@ yay -S --noconfirm --needed \
   bat battop btop cpupower eza fastfetch fzf git-delta github-cli grep imagemagick less net-tools ripgrep thefuck tmux tree-sitter tree-sitter-cli unzip zoxide zsh-syntax-highlighting \
   python-numpy python-pillow miniconda3 conda-zsh-completion \
   jdk8-openjdk jdk11-openjdk jdk17-openjdk jdk-openjdk npm nodejs prettierd uv lua rustup \
-  pyright rust-analyzer lua-language-server python-black python-isort stylua tinymist \
+  cmake pyright rust-analyzer lua-language-server python-black python-isort stylua tinymist \
   hyprland hypridle hyprpaper hyprpicker grimblast hyprlock mako ly waybar keyd brightnessctl xdg-desktop-portal-gtk xdg-desktop-portal-hyprland rofi rofi-power-menu wl-clipboard \
   breeze breeze-gtk qt6ct qt5ct polkit-gnome xorg-xhost networkmanager network-manager-applet systemd-resolvconf \
   bluez bluez-utils overskride \
