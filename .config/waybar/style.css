@@ -52,8 +52,7 @@ window#waybar.hidden {
 #network,
 #pulseaudio,
 #temperature,
-#tray,
-#custom-mouse-battery {
+#tray {
   margin: 4px 8px;
   padding: 0px 0px;
 }

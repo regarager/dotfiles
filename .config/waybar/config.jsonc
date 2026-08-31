@@ -10,7 +10,6 @@
     "tray",
     "hyprland/language",
     "pulseaudio",
-    "custom/mouse-battery",
     "temperature",
     "cpu",
     "battery",
@@ -70,11 +69,5 @@
   },
   "hyprland/language": {
     "format": "{shortDescription}"
-  },
-  "custom/mouse-battery": {
-    "format": " {}",
-    "exec": "mxw report battery",
-    "tooltip": false,
-    "interval": 5
   }
 }
