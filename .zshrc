@@ -9,6 +9,7 @@ SAVEHIST=10000
 
 set -o vi
 bindkey -v '^?' backward-delete-char
+setopt interactive_comments
 
 eval "$(zoxide init zsh)"
 
